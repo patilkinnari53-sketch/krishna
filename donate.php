@@ -1,0 +1,1586 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Govardhan Eco Village - Shri Shri Radha Vrindavan Bihari Temple Donation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Mobile First Responsive Styles */
+    @media (max-width: 768px) {
+      .divine-heading {
+        font-size: 1.8rem !important;
+        letter-spacing: 1px;
+      }
+      
+      .carousel-caption h2 {
+        font-size: 1.5rem !important;
+      }
+      
+      .carousel-caption p {
+        font-size: 1rem !important;
+      }
+      
+      .bg-overlay {
+        padding: 8px 16px;
+      }
+      
+      .info-section {
+        padding: 2rem 1rem;
+        min-height: auto;
+      }
+      
+      .content-box {
+        padding: 20px 15px;
+        margin: 0 10px;
+      }
+      
+      .elementor-heading-title {
+        font-size: 1.4rem !important;
+      }
+      
+      #donate .col-md-6 {
+        margin-bottom: 20px;
+      }
+      
+      .card-body p {
+        font-size: 1rem !important;
+      }
+      
+      .elementor-section {
+        padding: 30px 15px !important;
+      }
+      
+      .elementor-container {
+        flex-direction: column !important;
+      }
+      
+      .elementor-column {
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .modal-dialog {
+        margin: 20px;
+      }
+      
+      .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+      
+      #donation-video iframe {
+        height: 300px !important;
+      }
+      
+      .elementor-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .elementor-col-25 {
+        flex: 1 1 100% !important;
+        margin-bottom: 15px;
+      }
+      
+      .elementor-col-50 {
+        flex: 1 1 100% !important;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+      
+      .divine-heading {
+        font-size: 1.5rem !important;
+      }
+      
+      .carousel-caption h2 {
+        font-size: 1.2rem !important;
+      }
+      
+      .carousel-caption p {
+        font-size: 0.9rem !important;
+      }
+      
+      .info-section p {
+        font-size: 1rem;
+      }
+      
+      .content-box {
+        padding: 15px 10px;
+      }
+      
+      .elementor-heading-title {
+        font-size: 1.2rem !important;
+      }
+      
+      #chatBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 70px;
+        right: 15px;
+      }
+      
+      .modal-dialog {
+        margin: 10px;
+      }
+      
+      .btn-lg {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+      
+      #donation-video iframe {
+        height: 250px !important;
+      }
+      
+      h2 {
+        font-size: 1.5rem !important;
+      }
+      
+      .elementor-widget-text-editor p {
+        font-size: 1rem !important;
+      }
+    }
+
+    /* Base Styles (unchanged) */
+    /* Google Fonts (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display&display=swap');
+
+/* Caption Text Animation */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+/* Heading Style (with gradient) */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph Style */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  animation-delay: 0.6s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Semi-transparent overlay background */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+    .divine-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear;
+      text-shadow: 2px 2px 8px #fff176;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+
+    .divine-subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #ff9933;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s 0.5s forwards;
+      text-shadow: 1px 1px 4px #ffd700;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background-color: #fff8e1;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #005f56, #A8D5BA);
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #FFD700 !important;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #FFD700 !important;
+      text-shadow: 1px 1px 2px #222;
+    }
+    .btn-gold {
+      background: linear-gradient(90deg, #FFD700, #A8D5BA);
+      color: #005f56;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-gold:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+    .btn-success, .btn-primary {
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Section Styles */
+    section {
+      position: relative;
+    }
+    .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us {
+      background: linear-gradient(135deg, #FFF8E1, #A8D5BA);
+      color: #222;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .about-section h2,
+    .places-section h2,
+    .gallery-section h2,
+    .donation-section h2,
+    #information h2,
+    #why-choose-us h2,
+    #contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-image: linear-gradient(90deg, #FFD700, #A8D5BA, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-shine 3s infinite linear;
+      margin-bottom: 24px;
+    }
+    @keyframes text-shine {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+    .about-section p,
+    .places-section .card-body p,
+    .gallery-section p,
+    .donation-section p,
+    #information p,
+    #why-choose-us p,
+    #contact p {
+      font-size: 1.1rem;
+      color: #005f56;
+      line-height: 1.7;
+    }
+    /* Cards */
+    .card {
+      background: #FAFAFA;
+      border: 1px solid #FFD700;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    }
+    .card-title {
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .card-img-top {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 2px solid #FFD700;
+    }
+    /* Gallery Images */
+    .gallery-section img {
+      border: 3px solid #FFD700;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+    }
+    /* Footer */
+    footer {
+      background-color: #005f56;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    /* Modal */
+    .modal-header, .modal-footer {
+      background: linear-gradient(90deg, #A8D5BA, #FFD700);
+      color: #005f56;
+    }
+    .modal-content {
+      border-radius: 16px;
+      border: 2px solid #FFD700;
+    }
+    /* Chat Button */
+    #chatBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #FFD700;
+      color: #005f56;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    #chatBtn:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+
+
+    /* Animate shimmer + fade-up */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both, shimmer 3s infinite linear;
+}
+
+/* Gradient + shimmer heading */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph style with glow */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation-delay: 0.6s;
+}
+
+/* Fade in + slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Optional: Background overlay for readability */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.info-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px; /* Adds space between sections */
+}
+
+.info-section .overlay {
+  width: 100%;
+  padding: 5rem 1rem;
+  background: none; /* Removes black overlay box */
+}
+
+#goshala {
+  background-image: url('https://crowdera-platform.s3.ap-south-1.amazonaws.com/CDRA/campaign-assets/73f20090-c418-4ff1-84c5-68661a0d188d_original_about-goshala-2.jpg');
+}
+
+#wellness {
+  background-image: url('https://www.radhanathswami.com/wp-content/uploads/2023/03/gev-rns-yoga-govardhan.jpg');
+}
+
+/* Gradient + Animation Heading */
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  width: 100%;         /* full width of parent container */
+  max-width: 1000px;   /* increase as needed */
+  margin: auto;        /* center it */
+}
+
+
+/* Button Styling */
+.btn-warning {
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+.btn-warning:hover {
+  transform: scale(1.05);
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
+  max-width: 1200px; /* increased from 900px */
+  width: 200%;       /* ensures it stretches up to max-width */
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin: auto;      /* centers the box if not already centered */
+  padding: 20px;     /* optional: adds inner spacing */
+}
+
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade-in + slide-up animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Shimmer Gradient on Headings */
+.divine-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+#information {
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Purple to pink to peach */
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#information .lead {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+               0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.4);
+  animation: textShine 3s infinite linear;
+}
+
+
+@keyframes textShine {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Background with Om watermark */
+#information {
+  position: relative;
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Dark spiritual gradient */
+  z-index: 1;
+  overflow: hidden;
+}
+
+#information::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  background-image: url('https://i.ytimg.com/vi/ppiYNDZFtrs/maxresdefault.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1.50; /* Watermark visibility */
+  z-index: 0;
+}
+
+/* Keep text above the background */
+#information .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glowing white paragraph */
+#information .lead {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(255, 255, 255, 0.4),
+               0 0 20px rgba(255, 255, 255, 0.3);
+  animation: textShine 3s infinite ease-in-out;
+}
+
+/* Shimmering glow effect */
+@keyframes textShine {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+                 0 0 12px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Animation for all main sections */
+section, .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us,
+.info-section, #goshala, #wellness, #information {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+.info-section .overlay, .content-box {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Animation for all images and cards */
+img, .card, .card-img-top, .gallery-section img, .info-section img {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images and cards */
+img:hover, .card:hover, .card-img-top:hover, .gallery-section img:hover, .info-section img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+}
+
+/* Animation for buttons */
+.btn, .btn-gold, .btn-success, .btn-primary, .btn-warning, .btn-outline-light {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.2s ease, background 0.3s, color 0.3s;
+}
+.btn:hover, .btn-gold:hover, .btn-success:hover, .btn-primary:hover, .btn-warning:hover, .btn-outline-light:hover {
+  transform: scale(1.05);
+}
+
+ .calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.calendar-real {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-real .header {
+  background-color: #2b593c;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.small-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 10px;
+}
+
+.small-calendar div {
+  border: 1px solid #e0e0e0;
+  min-height: 20px;
+  padding: 1px 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.small-calendar .day-name {
+  background-color: #c3e6cb;
+  font-weight: bold;
+  font-size: 9px;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.small-calendar .event {
+  font-size: 8px;
+  color: #00695c;
+  line-height: 1.1;
+  margin-top: 2px;
+  text-align: left;
+}
+
+  </style>
+</head>
+<body>
+  
+ <?php include ('header.php') ?>
+
+
+<?php
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+    echo '<div class="alert alert-success mb-4" role="alert">Thank you for your donation!</div>';
+}
+if (isset($_GET['error']) && $_GET['error'] == 1) {
+    echo '<div class="alert alert-danger mb-4" role="alert">Sorry, there was an error processing your donation. Please try again.</div>';
+}
+?>
+
+
+
+    
+   <!-- Donate Section -->
+  <section id="donate" class="donation-section py-5" data-aos="fade-up" style="margin-top: 60px;">
+    <div class="container">
+      <div class="row align-items-top">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.sCoR0hYZB5kDJB1EMIJuxwHaFj?r=0&pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3" alt="Temple Construction" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 text-top text-md-start">
+          <h2>Donate for Temple Construction</h2>
+          <p>Your support builds a sacred legacy for generations to come.</p>
+          <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">
+            Donate Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donate.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<section id="donation-video" style="padding: 50px 20px; background: linear-gradient(135deg, #e0f5ef, #b4e5d6); text-align: center; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="color: #104e47; font-size: 1.7rem; font-weight: 600;"> Watch How Your Donation Helps</h2>
+  <div style="max-width: 1000px; margin: 30px auto; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/-Qftd2MNOzc" title="Govardhan Eco Village || HG Gaurang Das Prabhuji || Temple Reconstruction"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section> 
+
+<section style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); padding: 50px 20px; font-family: 'Segoe UI', sans-serif;">
+  <div class="elementor-container" style="max-width: 1150px; margin: auto;">
+
+   <section class="elementor-section" style="padding: 50px 20px;">
+  <!-- Top Section -->
+  <div class="elementor-row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: space-between; margin-bottom: 50px;">
+    <div style="flex: 1 1 45%; text-align: center;">
+      <img src="https://i.pinimg.com/originals/59/8d/62/598d628e112fdab953e1fce709d35d54.jpg" alt="Deity Seva"
+           style="width: 100%; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+    </div>
+    <div style="flex: 1 1 50%;">
+      <h2 style="color: #104e47; font-size: 1.7rem; margin-bottom: 15px;">Deity Seva</h2>
+      <p style="font-size: 1.05rem; color: #1d3b35; line-height: 1.8;">
+        Please grab the opportunity to attain supreme blessings by offering different bhoga and services to Sri Sri Radha Vrindaban Behari and others. Your heartfelt support brings life to daily seva and festivals.
+      </p>
+    </div>
+  </div>
+
+  <!-- Donation Cards Row -->
+  <div class="elementor-row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+    <!-- Card 1 -->
+    <div style="flex: 1 1 45%; background: #fff; padding: 30px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); text-align: center;">
+      <h3 style="color: #10694e;">Sri Giriraj Seva</h3>
+      <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="flex: 1 1 45%; background: #fff; padding: 30px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); text-align: center;">
+      <h3 style="color: #10694e;">Sri Shaligram Seva</h3>
+      <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="flex: 1 1 45%; background: #fff; padding: 30px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); text-align: center;">
+      <h3 style="color: #10694e;">Sri Radha Madanmohan & Sri Lalita</h3>
+      <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="flex: 1 1 45%; background: #fff; padding: 30px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); text-align: center;">
+      <h3 style="color: #10694e;">Sri Radha Vrindaban Behari & Sri Gauranga</h3>
+      <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+  </div>
+
+ <!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+
+<section style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); padding: 50px 20px; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
+    
+    <!-- Image Section -->
+    <div style="flex: 1; text-align: center;">
+      <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6749db6dce88118ccdcfb782_4%20(1).avif" alt="Annadaan" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Text Section -->
+    <div style="flex: 1; padding-left: 10px; max-width: 600px;">
+      <h2 style="color: #2b593c; font-size: 1.7rem; margin-bottom: 15px;">Annadaan Donation</h2>
+      <p style="font-size: 1.1rem; color: #444; margin-bottom: 25px;">
+        Be a lifeline in rural communities! Your donation of food empowers families with nourishment, hope, and resilience. Join us in bridging the hunger gap and creating a brighter future.
+      </p>
+    <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">
+            Donate Now
+          </button>
+
+
+    </div>
+  </div>
+
+<!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<!-- Divider (optional) -->
+<section style="padding-top: 10px;">
+  <div style="max-width: 1200px; margin: auto;">
+    <hr style="border: none; height: 1px; background: #e0eee5; border-radius: 5px;">
+  </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); padding: 50px 20px; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
+
+    <!-- Image Block -->
+    <div style="flex: 1; text-align: center;">
+      <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6749daca944d736a9d1a25be_2.avif" alt="Goseva" style="width: 100%; max-width: 420px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Content Block -->
+    <div style="flex: 1; padding-left: 10px; max-width: 600px;">
+      <h2 style="color: #2b593c; font-size: 1.7rem; margin-bottom: 15px;">Goseva</h2>
+      <p style="font-size: 1.1rem; color: #444; margin-bottom: 25px;">
+        Govardhan Goshala emphasizes giving every human being a chance to foster happiness and blessings in their lives through serving our beloved cows — by feeding and caressing them. You can also serve by adopting cows and donating to their healthcare and food.
+      </p>
+     <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">
+            Donate Now
+          </button>
+
+
+
+    </div>
+  </div>
+
+
+<!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<!-- Divider -->
+<section style="padding-top: 10px;">
+  <div style="max-width: 1200px; margin: auto;">
+    <hr style="border: none; height: 1px; background: #e0eee5; border-radius: 5px;">
+  </div>
+</section> 
+
+<section id="vrindavan-forest" style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 30px; position: relative;">
+
+    
+   <!-- Donation Section -->
+<section style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); border-radius: 12px; padding: 2rem; font-family: 'Segoe UI', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+    <!-- Vrindavan Sevak -->
+    <div style="flex: 1 1 30%; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #2b593c;">Vrindavan Sevak</h3>
+      <p style="font-size: 0.95rem;">Support sacred service in the Vrindavan forest area.</p>
+      <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+    <!-- Tree Plantation -->
+    <div style="flex: 1 1 30%; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #2b593c;">Tree Plantation</h3>
+      <p style="font-size: 0.95rem;">Contribute towards growing and maintaining the Vrindavan forest.</p>
+      <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+    <!-- Ekadashi Seva -->
+    <div style="flex: 1 1 30%; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #2b593c;">Ekadashi Seva</h3>
+      <p style="font-size: 0.95rem;">Make offerings on the auspicious Ekadashi for spiritual upliftment.</p>
+      <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Divider -->
+  <div style="margin-top: 50px; max-width: 1200px; margin-inline: auto;">
+    <hr style="border: none; height: 1px; background: #e0eee5; border-radius: 5px;">
+  </div>
+</section>
+
+<div class="elementor-widget-wrap elementor-element-populated" style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); border-radius: 12px; padding: 2rem;">
+  <section class="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default" style="margin-bottom: 1.5rem;">
+    <div class="elementor-container elementor-column-gap-default" style="display: flex; flex-wrap: wrap; align-items: center;">
+
+       
+      <!-- Left Column (Image) -->
+      <div class="elementor-column elementor-col-50 elementor-inner-column" style="flex: 1; padding: 1rem;">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-widget elementor-widget-image">
+            <div class="elementor-widget-container">
+              <img loading="lazy" decoding="async" width="350" height="312"
+                src="https://i.pinimg.com/736x/f2/1d/ba/f21dba2271e4f9e14a38d005cc7ea669.jpg"
+                class="attachment-large size-large" alt="Ekadashi Seva"
+                style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%; height: auto;" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (Heading + Text + Button) -->
+      <div class="elementor-column elementor-col-50 elementor-inner-column" style="flex: 1; padding: 1rem;">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-widget elementor-widget-heading">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default"
+                style="color: #2d5d41; font-weight: bold; font-size: 2rem; margin-bottom: 1rem;">
+                Ekadashi Seva
+              </h2>
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-widget elementor-widget-text-editor">
+            <div class="elementor-widget-container">
+              <p style="font-size: 1.1rem; color: #3a4e41; line-height: 1.6;">
+                Join us in the sacred offering of <strong>Ekadashi Seva</strong>. On this auspicious day, as the universe aligns to bless those who give, your donation becomes a powerful act of devotion. Support the service of the Lord and share spiritual merit with your loved ones. Let your offering uplift countless souls and please the Supreme Lord.
+              </p>
+            </div>
+          </div>
+
+          <div class="elementor-element elementor-align-left elementor-widget elementor-widget-button" style="margin-top: 1.2rem;">
+            <div class="elementor-widget-container">
+              <div class="elementor-button-wrapper">
+               
+    
+                  <span class="elementor-button-content-wrapper">
+                    <span class="elementor-button-icon elementor-align-icon-right" style="margin-left: 8px;">
+                      <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>
+                    </span>
+                   <button type="button" class="btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#donationModal">
+            Donate Now
+          </button>
+
+
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      </section>
+
+  <!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Optional Divider -->
+  <section class="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default">
+    <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-column elementor-col-100 elementor-inner-column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-widget-divider--view-line elementor-widget elementor-widget-divider">
+            <div class="elementor-widget-container">
+              <div class="elementor-divider">
+                <span class="elementor-divider-separator" style="border-top: 2px dashed #a3d9b1;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<div class="elementor-widget-wrap elementor-element-populated" style="background: linear-gradient(135deg, #d7f7ef, #a8d5ba); border-radius: 12px; padding: 2rem;">
+  <!-- Top Section: Image Left, Paragraph Right -->
+  <section class="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default" style="margin-bottom: 2rem;">
+    <div class="elementor-container elementor-column-gap-default" style="display: flex; flex-wrap: wrap; align-items: center;">
+
+      <!-- Left Image -->
+      <div class="elementor-column elementor-col-50 elementor-inner-column" style="flex: 1; padding: 1rem;">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-widget elementor-widget-image">
+            <div class="elementor-widget-container">
+              <img loading="lazy" width="350" height="312"
+                   src="https://tse4.mm.bing.net/th/id/OIP.4EePRPA46w3gsgfskMU7MQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                   alt="Special Services"
+                   style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Text -->
+      <div class="elementor-column elementor-col-50 elementor-inner-column" style="flex: 1; padding: 1rem;">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-widget elementor-widget-heading">
+            <div class="elementor-widget-container">
+              <h2 style="color: #476d4a; font-weight: bold; font-size: 1.7rem;">Special Services</h2>
+            </div>
+          </div>
+          <div class="elementor-widget elementor-widget-text-editor">
+            <div class="elementor-widget-container">
+              <p style="font-size: 1.1rem; color: #384f3c;">
+                Please take part in these cherished services to earn divine grace. Offerings like <strong>Mahat Seva</strong>,
+                <strong>Mango Festival</strong>, <strong>Nitya Seva</strong>, and <strong>Mangalam Celebrations</strong>
+                help spread joy and spiritual upliftment across all lives they touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ <section class="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default">
+  <div class="elementor-container elementor-column-gap-default" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+
+    <!-- Mahat Seva -->
+    <div class="elementor-column elementor-col-25 elementor-inner-column" style="flex: 1 1 22%; text-align: center; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+      <h3 style="color: #3f5e3d;">Mahat Seva</h3>
+      <button type="button" class="btn btn-success btn-lg mt-3 openDonationModal" data-bs-toggle="modal" data-bs-target="#donationModal" data-title="Mahat Seva">
+        Donate Now
+      </button>
+    </div>
+
+    <!-- Mango Seva -->
+    <div class="elementor-column elementor-col-25 elementor-inner-column" style="flex: 1 1 22%; text-align: center; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+      <h3 style="color: #3f5e3d;">Mango Seva</h3>
+      <button type="button" class="btn btn-success btn-lg mt-3 openDonationModal" data-bs-toggle="modal" data-bs-target="#donationModal" data-title="Mango Seva">
+        Donate Now
+      </button>
+    </div>
+
+    <!-- Mangalam Seva -->
+    <div class="elementor-column elementor-col-25 elementor-inner-column" style="flex: 1 1 22%; text-align: center; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+      <h3 style="color: #3f5e3d;">Mangalam Seva</h3>
+      <button type="button" class="btn btn-success btn-lg mt-3 openDonationModal" data-bs-toggle="modal" data-bs-target="#donationModal" data-title="Mangalam Seva">
+        Donate Now
+      </button>
+    </div>
+
+    <!-- Nitya Seva -->
+    <div class="elementor-column elementor-col-25 elementor-inner-column" style="flex: 1 1 22%; text-align: center; background: #ffffff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+      <h3 style="color: #3f5e3d;">Nitya Seva</h3>
+      <button type="button" class="btn btn-success btn-lg mt-3 openDonationModal" data-bs-toggle="modal" data-bs-target="#donationModal" data-title="Nitya Seva">
+        Donate Now
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Shared Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg rounded-4" style="max-height: 90vh; overflow: hidden;">
+      <div class="modal-header py-2 px-3">
+        <h5 class="modal-title" id="donationModalLabel" style="font-size: 1.25rem;">Make a Donation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" novalidate enctype="multipart/form-data" action="process_donation.php" method="post">
+        <div class="mb-2 px-3">
+          <label for="fullName" class="form-label small">Full Name</label>
+          <input type="text" class="form-control form-control-sm" id="fullName" name="full_name" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="emailAddress" class="form-label small">Email address</label>
+          <input type="email" class="form-control form-control-sm" id="emailAddress" name="email_address" required>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="donationAmount" class="form-label small">Donation Amount (₹)</label>
+          <input type="number" class="form-control form-control-sm" id="donationAmount" name="donation_amount" required min="1">
+        </div>
+        <div class="mb-2 px-3">
+          <label class="form-label small">Payment Method</label>
+          <select class="form-select form-select-sm" name="payment_method" required>
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash">Cash / Cheque</option>
+          </select>
+        </div>
+        <div class="mb-2 px-3">
+          <label for="message" class="form-label small">Message (Optional)</label>
+          <textarea class="form-control form-control-sm" id="message" name="message" rows="2"></textarea>
+        </div>
+        <div class="modal-footer py-2 px-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success btn-sm px-3">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Divider -->
+  <section class="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default" style="margin-top: 2rem;">
+    <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-column elementor-col-100 elementor-inner-column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-widget-divider--view-line elementor-widget elementor-widget-divider">
+            <div class="elementor-widget-container">
+              <div class="elementor-divider">
+                <span class="elementor-divider-separator" style="border-top: 2px dashed #b7d9af;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<?php include ('footer.php') ?>
+
+
+  <!-- All JS scripts from original -->
+  <!-- JS Scripts -->
+
+
+
+<script>
+  document.querySelectorAll('.openDonationModal').forEach(button => {
+    button.addEventListener('click', function () {
+      // Fixed title – do not modify it
+      document.getElementById('donationModalLabel').textContent = "Make a Donation";
+
+      // Optional: clear or set seva title input if needed
+      const sevaInput = document.getElementById('sevaTitleInput');
+      if (sevaInput) sevaInput.value = '';
+    });
+  });
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    // Chat Logic
+    const chatBtn = document.getElementById('chatBtn');
+    const chatBox = document.getElementById('chatBox');
+    const closeChat = document.getElementById('closeChat');
+    const sendBtn = document.getElementById('sendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const answers = {
+      "hello": "Hare Krishna! How can I assist you about Krishna or Govardhan Eco Village?",
+      "hi": "Namaste! Feel free to ask anything about GEV or Lord Krishna.",
+      "thank you": "You're most welcome! May Krishna bless you!",
+      "thanks": "Glad I could help! Hare Krishna 🙏",
+      "who are you": "🙏 I am a humble sevak (servant) of Lord Krishna, here to help you learn about His glories and Govardhan Eco Village.",
+      "krishna": "Lord Krishna is the Supreme Personality of Godhead, known for his pastimes in Vrindavan and teachings in the Bhagavad Gita.",
+      "radha": "Srimati Radharani is the divine consort of Krishna, symbolizing the highest devotion and love.",
+      "govardhan": "Govardhan Eco Village is an award-winning sustainable community founded by Radhanath Swami Maharaj.",
+      "govardhan hill": "Govardhan Hill was lifted by Krishna to protect the villagers of Vrindavan from heavy rains sent by Indra.",
+      "temple": "The Radha Krishna Temple at GEV is a peaceful place for meditation, devotion, and spiritual upliftment.",
+      "location": "Govardhan Eco Village is located in Wada, Palghar District, Maharashtra – about 2.5 hours from Mumbai.",
+      "address": "The full address is: Govardhan Eco Village, Galtare, Wada, Maharashtra 421303, India.",
+      "goshala": "The GEV Goshala is home to over 100 protected cows, bulls, and calves cared for with love and devotion.",
+      "cow": "Cows at GEV are treated with great respect and are an essential part of the sustainable ecosystem.",
+      "activities": "You can enjoy yoga, organic farming, cow seva, spiritual discourses, eco tours, and meditation at GEV.",
+      "retreat": "GEV offers spiritual retreats, yoga teacher training, and residential volunteer programs.",
+      "rooms": "Yes, GEV has eco-friendly accommodation for guests, from basic rooms to luxury cottages.",
+      "food": "GEV serves delicious, sattvic, vegetarian meals prepared with organic produce from their own farms.",
+      "donate": "To support GEV, visit the donation page. Your help nurtures cows, organic farming, and rural education.",
+      "timing": "The temple is open every day. Darshan timings are usually 7 AM to 12 PM and 4 PM to 8 PM.",
+      "website": "You can visit the official website at: https://www.ecovillage.org.in",
+      "volunteer": "GEV welcomes volunteers to help in cow care, gardening, education, and more. Check the website for details.",
+      "contact": "You can contact GEV at +91 9167203301 or email info@ecovillage.org.in",
+      "bhagavad gita": "GEV offers Gita study sessions and spiritual classes to understand the teachings of Bhagavad Gita deeply.",
+      "ashram": "GEV also serves as a spiritual ashram, offering an ideal place to reflect, serve, and grow."
+    };
+    chatBtn.onclick = () => { chatBox.style.display = 'block'; };
+    closeChat.onclick = () => { chatBox.style.display = 'none'; };
+    sendBtn.onclick = () => {
+      const userMessage = chatInput.value.trim();
+      if (userMessage === '') return;
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #A8D5BA;"><strong>You:</strong> ${userMessage}</div>`;
+      chatInput.value = '';
+      let reply = "🙏 Sorry, I don't have information about that. Try asking about Krishna, Govardhan, temple, or cows.";
+      for (const keyword in answers) {
+        if (userMessage.toLowerCase().includes(keyword)) {
+          reply = answers[keyword];
+          break;
+        }
+      }
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #FFD700;"><strong>AI:</strong> ${reply}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+ 
+    <script>
+  function openDonationModal() {
+    document.getElementById("donationModal").style.display = "block";
+  }
+
+  function closeDonationModal() {
+    document.getElementById("donationModal").style.display = "none";
+  }
+
+  // Close modal when clicking outside the form box
+  window.onclick = function(event) {
+    const modal = document.getElementById("donationModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+</body>
+</html>

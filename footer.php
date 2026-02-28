@@ -1,0 +1,88 @@
+<!-- ISKCON GEV Footer - Styled to Match Navbar -->
+<section style="
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: #e2e8f0;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+">
+
+  <!-- Contact Info -->
+  <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: space-between; max-width: 1100px; margin: auto;">
+    
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="margin-bottom: 10px; font-size: 1rem; color: #fff;">Address</h4>
+      <p style="margin: 8px 0; line-height: 1.6;">
+        Galtare, P.O. Hamrapur,<br>
+        Wada Taluka, District Palghar - 421 303,<br>
+        Maharashtra, India
+      </p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="margin-bottom: 10px; font-size: 1rem; color: #fff;">Day Visit</h4>
+      <p>
+        📞 <a href="tel:+919920055993" style="color: #93c5fd; text-decoration: none;">+91-9920055993</a><br>
+        ✉️ <a href="mailto:dayvisits@iskcongev.com" style="color: #93c5fd; text-decoration: none;">dayvisits@iskcongev.com</a>
+      </p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="margin-bottom: 10px; font-size: 1rem; color: #fff;">Donations</h4>
+      <p>
+        📞 <a href="tel:+919370950813" style="color: #93c5fd; text-decoration: none;">+91-9370950813</a><br>
+        ✉️ <a href="mailto:sevaoffice@iskcongev.com" style="color: #93c5fd; text-decoration: none;">sevaoffice@iskcongev.com</a>
+      </p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="margin-bottom: 10px; font-size: 1rem; color: #fff;">Room Bookings</h4>
+      <p>
+        📞 <a href="tel:+919226516922" style="color: #93c5fd; text-decoration: none;">+91-9226516922</a><br>
+        📞 <a href="tel:+919226516923" style="color: #93c5fd; text-decoration: none;">+91-9226516923</a><br>
+        ✉️ <a href="mailto:contactus@ecovillage.org.in" style="color: #93c5fd; text-decoration: none;">contactus@ecovillage.org.in</a>
+      </p>
+    </div>
+  </div>
+
+  <hr style="margin: 30px 0; border-color: rgba(255,255,255,0.1);">
+
+  <!-- Bottom Section -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: flex-start; max-width: 1100px; margin: auto;">
+
+    <div style="flex: 1; min-width: 250px;">
+      <img src="https://iskcongev.com/wp-content/uploads/2022/11/Logo-GEV-07.svg" alt="GEV Logo" style="max-width: 90px; margin-bottom: 10px;">
+      <p style="font-size: 0.85rem; line-height: 1.6; color: #cbd5e1;">
+        <strong style="color: #fff;">ISKCON Govardhan Ecovillage</strong><br>
+        Hare Krishna Hare Krishna Krishna Krishna Hare Hare<br>
+        Hare Rama Hare Rama Rama Rama Hare Hare
+      </p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: #fff;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="about.php?page=about" style="color: #93c5fd; text-decoration: none;">About Us</a></li>
+        <li><a href="donate.php?page=donate" style="color: #93c5fd; text-decoration: none;">Donate</a></li>
+        <li><a href="gallery.php?page=gallery" style="color: #93c5fd; text-decoration: none;">Gallery</a></li>
+        <li><a href="contact.php?page=contact" style="color: #93c5fd; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 180px;">
+      <h4 style="font-size: 1rem; color: #fff;">Policies</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.6;">
+        <li><a href="https://iskcongev.com/terms-conditions-of-donation/" style="color: #93c5fd; text-decoration: none;">Terms of Donations</a></li>
+        <li><a href="https://iskcongev.com/privacy-policy/" style="color: #93c5fd; text-decoration: none;">Privacy Policy</a></li>
+        <li><a href="https://iskcongev.com/refund-and-cancellation-policy/" style="color: #93c5fd; text-decoration: none;">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="max-width: 1100px; margin: 25px auto 0; text-align: center; font-size: 0.8rem; color: #cbd5e1;">
+    © <script>document.write(new Date().getFullYear())</script> ISKCON – Govardhan Ecovillage. All rights reserved.
+  </div>
+</section>

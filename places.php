@@ -1,0 +1,943 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Govardhan Eco Village - Shri Shri Radha Vrindavan Bihari Temple Donation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+ <style>
+    /* Mobile First Responsive Styles */
+    @media (max-width: 768px) {
+      .divine-heading {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+      }
+      
+      .carousel-caption h2 {
+        font-size: 1.2rem;
+      }
+      
+      .carousel-caption p {
+        font-size: 0.9rem;
+      }
+      
+      .bg-overlay {
+        padding: 8px 16px;
+      }
+      
+      .info-section {
+        padding: 2rem 1rem;
+        min-height: auto;
+      }
+      
+      .content-box {
+        padding: 20px 15px;
+        margin: 0 10px;
+      }
+      
+      .elementor-heading-title {
+        font-size: 1.3rem !important;
+      }
+      
+      #places .col-md-6 {
+        margin-bottom: 20px;
+      }
+      
+      .card-body p {
+        font-size: 1rem !important;
+      }
+      
+      .info-section p.lead {
+        font-size: 1.1rem !important;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+      
+      .divine-heading {
+        font-size: 1.2rem;
+      }
+      
+      .carousel-caption h2 {
+        font-size: 1rem;
+      }
+      
+      .carousel-caption p {
+        font-size: 0.8rem;
+      }
+      
+      .info-section p {
+        font-size: 1rem;
+      }
+      
+      .content-box {
+        padding: 15px 10px;
+      }
+      
+      .elementor-heading-title {
+        font-size: 1.1rem !important;
+      }
+      
+      .card-title {
+        font-size: 1.1rem !important;
+      }
+      
+      #chatBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 70px;
+        right: 15px;
+      }
+    }
+
+    /* Base Styles (unchanged) */
+    /* Google Fonts (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display&display=swap');
+
+/* Caption Text Animation */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+/* Heading Style (with gradient) */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph Style */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  animation-delay: 0.6s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Semi-transparent overlay background */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+    .divine-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear;
+      text-shadow: 2px 2px 8px #fff176;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+
+    .divine-subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #ff9933;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s 0.5s forwards;
+      text-shadow: 1px 1px 4px #ffd700;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background-color: #fff8e1;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #005f56, #A8D5BA);
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #FFD700 !important;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #FFD700 !important;
+      text-shadow: 1px 1px 2px #222;
+    }
+    .btn-gold {
+      background: linear-gradient(90deg, #FFD700, #A8D5BA);
+      color: #005f56;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-gold:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+    .btn-success, .btn-primary {
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Section Styles */
+    section {
+      position: relative;
+    }
+    .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us {
+      background: linear-gradient(135deg, #FFF8E1, #A8D5BA);
+      color: #222;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .about-section h2,
+    .places-section h2,
+    .gallery-section h2,
+    .donation-section h2,
+    #information h2,
+    #why-choose-us h2,
+    #contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: bold;
+      background-image: linear-gradient(90deg, #FFD700, #A8D5BA, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-shine 3s infinite linear;
+      margin-bottom: 24px;
+    }
+    @keyframes text-shine {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+    .about-section p,
+    .places-section .card-body p,
+    .gallery-section p,
+    .donation-section p,
+    #information p,
+    #why-choose-us p,
+    #contact p {
+      font-size: 1.1rem;
+      color: #005f56;
+      line-height: 1.7;
+    }
+    /* Cards */
+    .card {
+      background: #FAFAFA;
+      border: 1px solid #FFD700;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    }
+    .card-title {
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .card-img-top {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 2px solid #FFD700;
+    }
+    /* Gallery Images */
+    .gallery-section img {
+      border: 3px solid #FFD700;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+    }
+    /* Footer */
+    footer {
+      background-color: #005f56;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    /* Modal */
+    .modal-header, .modal-footer {
+      background: linear-gradient(90deg, #A8D5BA, #FFD700);
+      color: #005f56;
+    }
+    .modal-content {
+      border-radius: 16px;
+      border: 2px solid #FFD700;
+    }
+    /* Chat Button */
+    #chatBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #FFD700;
+      color: #005f56;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    #chatBtn:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+
+
+    /* Animate shimmer + fade-up */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both, shimmer 3s infinite linear;
+}
+
+/* Gradient + shimmer heading */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph style with glow */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation-delay: 0.6s;
+}
+
+/* Fade in + slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Optional: Background overlay for readability */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.info-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px; /* Adds space between sections */
+}
+
+.info-section .overlay {
+  width: 100%;
+  padding: 5rem 1rem;
+  background: none; /* Removes black overlay box */
+}
+
+#goshala {
+  background-image: url('https://crowdera-platform.s3.ap-south-1.amazonaws.com/CDRA/campaign-assets/73f20090-c418-4ff1-84c5-68661a0d188d_original_about-goshala-2.jpg');
+}
+
+#wellness {
+  background-image: url('https://www.radhanathswami.com/wp-content/uploads/2023/03/gev-rns-yoga-govardhan.jpg');
+}
+
+/* Gradient + Animation Heading */
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  width: 100%;         /* full width of parent container */
+  max-width: 1000px;   /* increase as needed */
+  margin: auto;        /* center it */
+}
+
+
+/* Button Styling */
+.btn-warning {
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+.btn-warning:hover {
+  transform: scale(1.05);
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
+  max-width: 1200px; /* increased from 900px */
+  width: 200%;       /* ensures it stretches up to max-width */
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin: auto;      /* centers the box if not already centered */
+  padding: 20px;     /* optional: adds inner spacing */
+}
+
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade-in + slide-up animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Shimmer Gradient on Headings */
+.divine-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+#information {
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Purple to pink to peach */
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#information .lead {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+               0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.4);
+  animation: textShine 3s infinite linear;
+}
+
+
+@keyframes textShine {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Background with Om watermark */
+#information {
+  position: relative;
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Dark spiritual gradient */
+  z-index: 1;
+  overflow: hidden;
+}
+
+#information::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  background-image: url('https://i.ytimg.com/vi/ppiYNDZFtrs/maxresdefault.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1.50; /* Watermark visibility */
+  z-index: 0;
+}
+
+/* Keep text above the background */
+#information .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glowing white paragraph */
+#information .lead {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(255, 255, 255, 0.4),
+               0 0 20px rgba(255, 255, 255, 0.3);
+  animation: textShine 3s infinite ease-in-out;
+}
+
+/* Shimmering glow effect */
+@keyframes textShine {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+                 0 0 12px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Animation for all main sections */
+section, .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us,
+.info-section, #goshala, #wellness, #information {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+.info-section .overlay, .content-box {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Animation for all images and cards */
+img, .card, .card-img-top, .gallery-section img, .info-section img {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images and cards */
+img:hover, .card:hover, .card-img-top:hover, .gallery-section img:hover, .info-section img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+}
+
+/* Animation for buttons */
+.btn, .btn-gold, .btn-success, .btn-primary, .btn-warning, .btn-outline-light {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.2s ease, background 0.3s, color 0.3s;
+}
+.btn:hover, .btn-gold:hover, .btn-success:hover, .btn-primary:hover, .btn-warning:hover, .btn-outline-light:hover {
+  transform: scale(1.05);
+}
+
+ .calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.calendar-real {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-real .header {
+  background-color: #2b593c;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.small-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 10px;
+}
+
+.small-calendar div {
+  border: 1px solid #e0e0e0;
+  min-height: 20px;
+  padding: 1px 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.small-calendar .day-name {
+  background-color: #c3e6cb;
+  font-weight: bold;
+  font-size: 9px;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.small-calendar .event {
+  font-size: 8px;
+  color: #00695c;
+  line-height: 1.1;
+  margin-top: 2px;
+  text-align: left;
+}
+
+.text-gold { color: #FFD700; }
+  .btn-gold {background:linear-gradient(90deg, #FFD700, #005f56, #FFD700); border: none; }
+  .btn-outline-gold { border-color: #FFD700; color: #FFD700; }
+  .bg-gold { background-color: #FFD700; }
+  .footer-long { background-color: #005f56; }
+  .social-icons a { text-decoration: none; }
+
+  .divine-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<?php include ('header.php') ?>
+
+
+
+ <div class="elementor-widget-wrap elementor-element-populated pt-5 mt-5">
+     
+
+  <!-- Heading -->
+<div class="elementor-element elementor-widget elementor-widget-heading animated slideInUp" data-animation="slideInUp">
+  <div class="elementor-widget-container">
+    <h1 class="elementor-heading-title" 
+        style="font-size: 1.6rem; font-weight: 600; margin-bottom: 15px;
+               background: linear-gradient(90deg, #FFD700, #FFB300);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               font-family: 'Cinzel', serif;">
+      Welcome to GEV Mini Vrindavan
+    </h1>
+  </div>
+</div>
+
+
+ <!-- Image (left-aligned, slightly increased size) -->
+<div class="elementor-element elementor-widget elementor-widget-image animated slideInUp" data-animation="slideInUp">
+  <div class="elementor-widget-container" style="text-align: left;">
+    <img src="https://thumbs.dreamstime.com/b/replica-original-govardhan-hill-mathura-govardhan-eco-village-replica-original-govardhan-hill-mathura-govardhan-eco-village-321654896.jpg"
+         alt="GEV Mini Vrindavan Map"
+         style="width: 100%; max-width: 750px; height: auto; border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+  </div>
+</div>
+
+
+  
+    <!-- Places Section -->
+ <section id="places" class="places-section mt-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center">Places to Explore</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="card h-100 shadow-sm">
+            <a href="https://th.bing.com/th/id/R.f6ff80ab937bf7b9356ca49df40adb90?rik=n4RBbrBKJoZutg&riu=http%3a%2f%2fyoga.krishna.com%2f2020%2f543%2f543_GDD_30.jpg&ehk=7KL1kDw6MjeYdzKNnHFD%2fHhdpcLM87pwVUJjOmcKhYM%3d&risl=&pid=ImgRaw&r=0" data-lightbox="places" data-title="Radha-Krishna Temple">
+              <img src="https://th.bing.com/th/id/R.f6ff80ab937bf7b9356ca49df40adb90?rik=n4RBbrBKJoZutg&riu=http%3a%2f%2fyoga.krishna.com%2f2020%2f543%2f543_GDD_30.jpg&ehk=7KL1kDw6MjeYdzKNnHFD%2fHhdpcLM87pwVUJjOmcKhYM%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Temple">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Radha-Krishna Temple</h5>
+              <p>Help us complete the majestic temple for divine service and worship.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="card h-100 shadow-sm">
+            <a href="https://architecture.live/wp-content/uploads/2017/05/Govardhan-Eco-VIllage-Biome-Environmental-Solutions-78f04a94450bc9f774e4bb96f8da9493-450x300.jpg" data-lightbox="places" data-title="Goshala">
+              <img src="https://architecture.live/wp-content/uploads/2017/05/Govardhan-Eco-VIllage-Biome-Environmental-Solutions-78f04a94450bc9f774e4bb96f8da9493-450x300.jpg" class="card-img-top" alt="Goshala">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Goshala</h5>
+              <p>Home to protected cows living in love and care.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="card h-100 shadow-sm">
+            <a href="https://th.bing.com/th/id/OIP.0HXIG1UcB2KSCx7Kr0DYYQHaFj?pid=ImgDet&w=474&h=355&rs=1" data-lightbox="places" data-title="Vrindavan Forest">
+              <img src="https://th.bing.com/th/id/OIP.0HXIG1UcB2KSCx7Kr0DYYQHaFj?pid=ImgDet&w=474&h=355&rs=1" class="card-img-top" alt="Forest">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Vrindavan Forest</h5>
+              <p>Peaceful forest trail for meditation and reflection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="goshala" class="info-section text-white text-center">
+  <div class="overlay">
+    <div class="container py-5">
+      <div class="content-box mx-auto p-4 rounded fade-slide-up">
+        <h2 class="divine-heading">Govardhan Goshala</h2>
+       <p class="lead">
+          The Goshala at Govardhan Ecovillage was started in 2003. Beginning with only 9 cows & bulls,the number today has increased to 104 and is expected 
+          to reach 150 in next few years.One of the unique features at the Govardhan Ecovillage Goshala is the personal attention and care given,with separate special zones allocated for Bulls, Cows, Calves and milking Cows. Pregnant Cows are offered special diet and care to ensure proper health of the Cow and the calf. Old cows and bulls are given special care.Cows at Govardhan Ecovillage are treated as one of the family members and all due care is given to them. 
+          The health status of each and every cow is noted on a daily basis and is logged for long term monitoring.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wellness" class="info-section text-white text-center">
+  <div class="overlay">
+    <div class="container py-5">
+      <div class="content-box mx-auto p-4 rounded fade-slide-up">
+        <h2 class="divine-heading">Yoga & Wellness</h2>
+        <p class="lead">
+          GEV offers a spiritually charged environment for yoga, Ayurveda, and holistic wellness.<br>
+          Certified instructors and Ayurvedic doctors guide rejuvenating experiences.
+        </p>
+        
+          </div>
+    </div>
+  </div>
+</section>
+
+<?php include ('footer.php') ?>
+
+  <!-- All JS scripts from original -->
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    // Chat Logic
+    const chatBtn = document.getElementById('chatBtn');
+    const chatBox = document.getElementById('chatBox');
+    const closeChat = document.getElementById('closeChat');
+    const sendBtn = document.getElementById('sendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const answers = {
+      "hello": "Hare Krishna! How can I assist you about Krishna or Govardhan Eco Village?",
+      "hi": "Namaste! Feel free to ask anything about GEV or Lord Krishna.",
+      "thank you": "You're most welcome! May Krishna bless you!",
+      "thanks": "Glad I could help! Hare Krishna 🙏",
+      "who are you": "🙏 I am a humble sevak (servant) of Lord Krishna, here to help you learn about His glories and Govardhan Eco Village.",
+      "krishna": "Lord Krishna is the Supreme Personality of Godhead, known for his pastimes in Vrindavan and teachings in the Bhagavad Gita.",
+      "radha": "Srimati Radharani is the divine consort of Krishna, symbolizing the highest devotion and love.",
+      "govardhan": "Govardhan Eco Village is an award-winning sustainable community founded by Radhanath Swami Maharaj.",
+      "govardhan hill": "Govardhan Hill was lifted by Krishna to protect the villagers of Vrindavan from heavy rains sent by Indra.",
+      "temple": "The Radha Krishna Temple at GEV is a peaceful place for meditation, devotion, and spiritual upliftment.",
+      "location": "Govardhan Eco Village is located in Wada, Palghar District, Maharashtra – about 2.5 hours from Mumbai.",
+      "address": "The full address is: Govardhan Eco Village, Galtare, Wada, Maharashtra 421303, India.",
+      "goshala": "The GEV Goshala is home to over 100 protected cows, bulls, and calves cared for with love and devotion.",
+      "cow": "Cows at GEV are treated with great respect and are an essential part of the sustainable ecosystem.",
+      "activities": "You can enjoy yoga, organic farming, cow seva, spiritual discourses, eco tours, and meditation at GEV.",
+      "retreat": "GEV offers spiritual retreats, yoga teacher training, and residential volunteer programs.",
+      "rooms": "Yes, GEV has eco-friendly accommodation for guests, from basic rooms to luxury cottages.",
+      "food": "GEV serves delicious, sattvic, vegetarian meals prepared with organic produce from their own farms.",
+      "donate": "To support GEV, visit the donation page. Your help nurtures cows, organic farming, and rural education.",
+      "timing": "The temple is open every day. Darshan timings are usually 7 AM to 12 PM and 4 PM to 8 PM.",
+      "website": "You can visit the official website at: https://www.ecovillage.org.in",
+      "volunteer": "GEV welcomes volunteers to help in cow care, gardening, education, and more. Check the website for details.",
+      "contact": "You can contact GEV at +91 9167203301 or email info@ecovillage.org.in",
+      "bhagavad gita": "GEV offers Gita study sessions and spiritual classes to understand the teachings of Bhagavad Gita deeply.",
+      "ashram": "GEV also serves as a spiritual ashram, offering an ideal place to reflect, serve, and grow."
+    };
+    chatBtn.onclick = () => { chatBox.style.display = 'block'; };
+    closeChat.onclick = () => { chatBox.style.display = 'none'; };
+    sendBtn.onclick = () => {
+      const userMessage = chatInput.value.trim();
+      if (userMessage === '') return;
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #A8D5BA;"><strong>You:</strong> ${userMessage}</div>`;
+      chatInput.value = '';
+      let reply = "🙏 Sorry, I don't have information about that. Try asking about Krishna, Govardhan, temple, or cows.";
+      for (const keyword in answers) {
+        if (userMessage.toLowerCase().includes(keyword)) {
+          reply = answers[keyword];
+          break;
+        }
+      }
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #FFD700;"><strong>AI:</strong> ${reply}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.querySelectorAll('.card, .gallery-section img').forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.1}s`;
+  });
+</script>
+
+
+
+
+</body>
+</html>

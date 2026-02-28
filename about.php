@@ -1,0 +1,1427 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Govardhan Eco Village - Shri Shri Radha Vrindavan Bihari Temple Donation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Consolidated Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&family=Cinzel:wght@700&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* YOUR EXISTING CSS - COMPLETELY UNCHANGED */
+    /* Google Fonts (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display&display=swap');
+
+/* Caption Text Animation */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+/* Heading Style (with gradient) */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph Style */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  animation-delay: 0.6s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Semi-transparent overlay background */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+    .divine-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear;
+      text-shadow: 2px 2px 8px #fff176;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+
+    .divine-subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #ff9933;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s 0.5s forwards;
+      text-shadow: 1px 1px 4px #ffd700;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background-color: #fff8e1;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #005f56, #A8D5BA);
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #FFD700 !important;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #FFD700 !important;
+      text-shadow: 1px 1px 2px #222;
+    }
+    .btn-gold {
+      background: linear-gradient(90deg, #FFD700, #A8D5BA);
+      color: #005f56;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-gold:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+    .btn-success, .btn-primary {
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Section Styles */
+    section {
+      position: relative;
+    }
+    .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us {
+      background: linear-gradient(135deg, #FFF8E1, #A8D5BA);
+      color: #222;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .about-section h2,
+    .places-section h2,
+    .gallery-section h2,
+    .donation-section h2,
+    #information h2,
+    #why-choose-us h2,
+    #contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: bold;
+      background-image: linear-gradient(90deg, #FFD700, #A8D5BA, #FFD700);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-shine 3s infinite linear;
+      margin-bottom: 24px;
+    }
+    @keyframes text-shine {
+      0% { background-position: -100%; }
+      100% { background-position: 200%; }
+    }
+    .about-section p,
+    .places-section .card-body p,
+    .gallery-section p,
+    .donation-section p,
+    #information p,
+    #why-choose-us p,
+    #contact p {
+      font-size: 1.1rem;
+      color: #005f56;
+      line-height: 1.7;
+    }
+    /* Cards */
+    .card {
+      background: #FAFAFA;
+      border: 1px solid #FFD700;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    }
+    .card-title {
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .card-img-top {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 2px solid #FFD700;
+    }
+    /* Gallery Images */
+    .gallery-section img {
+      border: 3px solid #FFD700;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+    }
+    /* Footer */
+    footer {
+      background-color: #005f56;
+      color: #FFD700;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    /* Modal */
+    .modal-header, .modal-footer {
+      background: linear-gradient(90deg, #A8D5BA, #FFD700);
+      color: #005f56;
+    }
+    .modal-content {
+      border-radius: 16px;
+      border: 2px solid #FFD700;
+    }
+    /* Chat Button */
+    #chatBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #FFD700;
+      color: #005f56;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    #chatBtn:hover {
+      background: #005f56;
+      color: #FFD700;
+    }
+
+
+    /* Animate shimmer + fade-up */
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeInUp 1.5s ease-out both, shimmer 3s infinite linear;
+}
+
+/* Gradient + shimmer heading */
+.carousel-caption h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.3s;
+}
+
+/* Paragraph style with glow */
+.carousel-caption p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation-delay: 0.6s;
+}
+
+/* Fade in + slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Optional: Background overlay for readability */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.info-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px; /* Adds space between sections */
+}
+
+.info-section .overlay {
+  width: 100%;
+  padding: 5rem 1rem;
+  background: none; /* Removes black overlay box */
+}
+
+#goshala {
+  background-image: url('https://crowdera-platform.s3.ap-south-1.amazonaws.com/CDRA/campaign-assets/73f20090-c418-4ff1-84c5-68661a0d188d_original_about-goshala-2.jpg');
+}
+
+#wellness {
+  background-image: url('https://www.radhanathswami.com/wp-content/uploads/2023/03/gev-rns-yoga-govardhan.jpg');
+}
+
+/* Gradient + Animation Heading */
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  width: 100%;         /* full width of parent container */
+  max-width: 1000px;   /* increase as needed */
+  margin: auto;        /* center it */
+}
+
+
+/* Button Styling */
+.btn-warning {
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+.btn-warning:hover {
+  transform: scale(1.05);
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
+  max-width: 1200px; /* increased from 900px */
+  width: 200%;       /* ensures it stretches up to max-width */
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin: auto;      /* centers the box if not already centered */
+  padding: 20px;     /* optional: adds inner spacing */
+}
+
+
+.content-box {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade-in + slide-up animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Shimmer Gradient on Headings */
+.divine-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+#information {
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Purple to pink to peach */
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#information .lead {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+               0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.4);
+  animation: textShine 3s infinite linear;
+}
+
+
+@keyframes textShine {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Background with Om watermark */
+#information {
+  position: relative;
+  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Dark spiritual gradient */
+  z-index: 1;
+  overflow: hidden;
+}
+
+#information::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  background-image: url('https://i.ytimg.com/vi/ppiYNDZFtrs/maxresdefault.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1.50; /* Watermark visibility */
+  z-index: 0;
+}
+
+/* Keep text above the background */
+#information .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glowing white paragraph */
+#information .lead {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+               0 0 12px rgba(255, 255, 255, 0.4),
+               0 0 20px rgba(255, 255, 255, 0.3);
+  animation: textShine 3s infinite ease-in-out;
+}
+
+/* Shimmering glow effect */
+@keyframes textShine {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+                 0 0 12px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Animation for all main sections */
+section, .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us,
+.info-section, #goshala, #wellness, #information {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+.info-section .overlay, .content-box {
+  animation: fadeSlideUp 1.2s ease-out both;
+}
+
+/* Animation for all images and cards */
+img, .card, .card-img-top, .gallery-section img, .info-section img {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images and cards */
+img:hover, .card:hover, .card-img-top:hover, .gallery-section img:hover, .info-section img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
+}
+
+/* Animation for buttons */
+.btn, .btn-gold, .btn-success, .btn-primary, .btn-warning, .btn-outline-light {
+  animation: fadeSlideUp 1.2s ease-out both;
+  transition: transform 0.2s ease, background 0.3s, color 0.3s;
+}
+.btn:hover, .btn-gold:hover, .btn-success:hover, .btn-primary:hover, .btn-warning:hover, .btn-outline-light:hover {
+  transform: scale(1.05);
+}
+
+ .calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.calendar-real {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-real .header {
+  background-color: #2b593c;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.small-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 10px;
+}
+
+.small-calendar div {
+  border: 1px solid #e0e0e0;
+  min-height: 20px;
+  padding: 1px 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.small-calendar .day-name {
+  background-color: #c3e6cb;
+  font-weight: bold;
+  font-size: 9px;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.small-calendar .event {
+  font-size: 8px;
+  color: #00695c;
+  line-height: 1.1;
+  margin-top: 2px;
+  text-align: left;
+}
+
+.text-gold { color: #FFD700; }
+  .btn-gold { background-color: #FFD700; color: #005f56; border: none; }
+  .btn-outline-gold { border-color: #FFD700; color: #FFD700; }
+  .bg-gold { background-color: #FFD700; }
+  .footer-long { background-color: #005f56; }
+  .social-icons a { text-decoration: none; }
+
+  .divine-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+ 
+  .calendar-grid.small-calendar div {
+    padding: 4px 2px; /* was likely larger */
+    font-size: 0.75rem; /* smaller text */
+  }
+
+  .calendar-real {
+    width: 100%;
+    max-width: 360px; /* limit per calendar width */
+    margin: 10px auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .calendar-wrapper {
+    overflow-x: auto;
+  }
+
+  .header {
+    background: #2b593c;
+    color: white;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .event {
+    font-size: 0.6rem;
+    line-height: 1.1;
+  }
+
+
+   @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0px) rotate(-20deg); }
+      50% { transform: translateY(10px) rotate(-10deg); }
+    }
+
+    @keyframes glowText {
+      0% { text-shadow: 0 0 5px #b2dfdb; }
+      100% { text-shadow: 0 0 15px #64ffda; }
+    }
+
+    /* Add space between all main sections except the last one */
+section:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+
+#flying-krishna {
+  position: fixed;
+  width: 150px;
+  height: auto;
+  z-index: 1000;
+  animation: flyToOppositeTopCorner 15s ease-in-out forwards;
+  bottom: -150px;
+  right: -150px;
+  opacity: 0;
+  transform: rotate(-40deg) scale(0.7);
+}
+
+@keyframes flyToOppositeTopCorner {
+ 0% {
+    opacity: 0;
+    bottom: -150px;
+    right: -150px;
+    transform: rotate(-40deg) scale(0.7);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 1;
+    bottom: 50%;
+    right: 30%;
+    transform: rotate(-10deg) scale(1);
+  }
+  60% {
+    bottom: 70%;
+    right: 20%;
+    transform: rotate(10deg) scale(1);
+  }
+  80% {
+    bottom: 85%;
+    right: 10%;
+    transform: rotate(20deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    bottom: 95%;
+    right: 2%;
+    transform: rotate(30deg) scale(1);
+  }
+}
+
+/* === MOBILE RESPONSIVE FIXES === */
+@media (max-width: 768px) {
+  /* Mobile video section */
+  #full-width-video {
+    padding-top: 20px !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  #full-width-video div[style*="height: 600px"] {
+    height: 300px !important;
+  }
+  
+  /* Mobile Krishna images */
+  div[style*="display: flex; justify-content: center; gap: 40px"] {
+    gap: 20px !important;
+  }
+  
+  div[style*="display: flex; justify-content: center; gap: 40px"] img {
+    max-width: 120px !important;
+  }
+  
+  /* Mobile text sizing */
+  .divine-heading {
+    font-size: 1.4rem !important;
+  }
+  
+  h2[style*="font-size: 2.2rem"] {
+    font-size: 1.6rem !important;
+  }
+  
+  /* Mobile calendar */
+  .calendar-real {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 8px auto !important;
+  }
+  
+  .calendar-container {
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+  
+  /* Mobile touch targets */
+  .btn, .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Mobile layout */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Mobile flying Krishna */
+  #flying-krishna {
+    width: 100px !important;
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Touch-friendly elements */
+@media (max-width: 480px) {
+  #full-width-video div[style*="height: 600px"] {
+    height: 250px !important;
+  }
+  
+  div[style*="display: flex; justify-content: center; gap: 40px"] img {
+    max-width: 100px !important;
+  }
+  
+  .calendar-real {
+    max-width: 280px !important;
+  }
+  
+  h2[style*="font-size: 2.2rem"] {
+    font-size: 1.4rem !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<img src="https://pngfre.com/wp-content/uploads/krishna-28.png" id="flying-krishna" alt="Krishna">
+
+<?php include ('header.php') ?>
+
+ <section id="full-width-video" class="pt-5 mt-4 mb-5 position-relative">
+  <div class="row g-0">
+    <div class="col-12 position-relative">
+
+      <!-- Video Container -->
+      <div style="height: 600px; overflow: hidden; position: relative;">
+
+        <!-- Top-Left Heading with Gradient Text -->
+        <h2 style="
+          position: absolute;
+          top: 20px;
+          left: 30px;
+          z-index: 2;
+          background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-family: 'Cinzel', serif;
+          font-size:1.7rem;
+          margin: 0;
+          padding: 10px 20px;
+          font-weight: bold;
+        ">
+          Govardhan Eco Village
+        </h2>
+
+        <!-- Embedded YouTube Video -->
+        <iframe 
+          src="https://www.youtube.com/embed/-hd4HB8TcZg" 
+          title="Govardhan Eco Village By Iskcon (Wada,India)" 
+          style="width: 100%; height: 100%; border: none;" 
+          allowfullscreen 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Glowing aura SVG -->
+  <svg viewBox="0 0 200 200" width="300" height="300"
+       style="position: absolute; top: 30px; left: 50%; transform: translateX(-50%); z-index: 0; opacity: 0.15;">
+    <defs>
+      <radialGradient id="glowGradient">
+        <stop offset="0%" stop-color="#81d4fa"/>
+        <stop offset="100%" stop-color="#00796b" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="100" cy="100" r="100" fill="url(#glowGradient)"/>
+  </svg>
+
+  <section style="background: linear-gradient(135deg, #FFF8E1, #A8D5BA); padding: 20px 20px; position: relative; overflow: hidden; font-family: 'Cinzel', serif;"></section>
+  <!-- Krishna Images in Flexbox Row -->
+  
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; z-index: 1; position: relative;">
+    <!-- Krishna 1 -->
+    <img src="https://i.pinimg.com/originals/3f/72/d9/3f72d95fd0d514bb37ed5591c58d975a.png" 
+         alt="Lord Krishna" 
+         style="max-width: 200px; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 0 20px #64ffda);">
+
+    <!-- Krishna 2 -->
+    <img src="https://pngfre.com/wp-content/uploads/krishna-3.png" 
+         alt="Lord Krishna" 
+          style="max-width: 200px; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 0 20px #64ffda);">
+
+    <!-- Krishna 3 -->
+    <img src="https://png.pngtree.com/png-clipart/20230917/original/pngtree-shri-krishna-janmashtami-lord-swing-design-png-image_12298691.png" 
+         alt="Lord Krishna" 
+          style="max-width: 200px; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 0 20px #64ffda);">
+
+    <!-- Krishna 4 -->
+    <img src="https://i.pinimg.com/originals/e3/13/94/e313947def44ec5a723a1c9414c8a005.png" 
+         alt="Lord Krishna" 
+          style="max-width: 200px; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 0 20px #64ffda);">
+
+    <!-- Krishna 5 -->
+    <img src="https://pngfre.com/wp-content/uploads/krishna-5-204x300.png" 
+         alt="Lord Krishna" 
+          style="max-width: 200px; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 0 20px #64ffda);">
+  </div>
+
+  <!-- Divine Message -->
+  <div style="text-align: center; margin-top: 40px; z-index: 1; position: relative;">
+    <h2 style="
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #00796b, #64ffda, #00796b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 4s ease-in-out infinite alternate;
+    ">
+      🕉️ श्री कृष्ण गोविन्द हरे मुरारे
+    </h2>
+    <p style="font-size: 1.1rem; color: #1a535c;">
+      Embark on a journey of devotion at <strong>Govardhan Eco Village</strong>. <br>
+      Experience the bliss of Krishna Bhakti, Kirtan, and Vrindavan spirit.
+    </p>
+  </div>
+  
+ <!-- About Section -->
+  <section id="about" class="about-section text-center" data-aos="fade-up" style="margin-top: 60px;">
+    <div class="container">
+      <h2>About Govardhan Eco Village</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/08/f3/99.jpg" alt="Govardhan Eco Village" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <p>
+            Govardhan Eco Village (GEV), inspired by the teachings of His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, is a sustainable spiritual community and retreat center located in the peaceful foothills of the Sahyadri mountains near Mumbai, Maharashtra.
+          </p>
+          <p>
+            It integrates ancient Vedic wisdom with modern sustainable living practices. The village houses a beautiful temple of Sri Sri Radha-Vrindavan Bihari, Goshala for cow protection, organic farming areas, traditional village cottages, and eco-friendly architecture that mirrors Vrindavan's sacred atmosphere.
+          </p>
+          <p>
+            Recognized globally for its environmental initiatives and spiritual ambience, GEV serves as a model for harmonious coexistence between nature and spirituality, attracting thousands of pilgrims, researchers, students, and seekers from across the world.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Full-Year Spiritual Calendar Section -->
+<section id="spiritual-calendar" style="background-image: linear-gradient(135deg, #FFF8E1, #A8D5BA); border-radius: 1px;">
+    <h2 class="text-center mb-4" style="color: #2b593c;">🗓️ GEV Full-Year Festival Calendar – 2025</h2>
+      <table class="table table-bordered table-striped text-center">
+          <div class="calendar-container">
+            <body id="calendar-page">
+
+  <!-- January -->
+  <div class="calendar-real">
+  <div class="header">🗓️ January 2025</div>
+  <div class="calendar-grid small-calendar">
+    <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div><div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+    
+    <div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div>
+    <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+    <div>10<div class="event">Putrada Ekadashi</div></div>
+    <div>11</div>
+    <div>12</div><div>13</div>
+    <div>14<div class="event">Makar Sankranti<br>Ganga Puja</div></div>
+    <div>15</div><div>16</div><div>17</div><div>18</div>
+    <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+    <div>25<div class="event">Shattila Ekadashi</div></div>
+    <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+  </div>
+</div>
+
+  <!-- February -->
+<div class="calendar-real">
+  <div class="header">🗓️ February 2025</div>
+  <div class="calendar-grid small-calendar">
+    <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div><div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+    
+    <div></div><div></div><div></div><div></div><div></div><div></div><div>1</div>
+    <div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+    <div>8<div class="event">Jaya Ekadashi</div></div>
+    <div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+    <div>14<div class="event">Vasant Panchami</div></div>
+    <div>15</div><div>16</div>
+    <div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div>
+    <div>23</div>
+    <div>24<div class="event">Vijaya Ekadashi</div></div>
+    <div>25</div><div>26</div><div>27</div><div>28</div>
+  </div>
+</div>
+
+<!-- March -->
+<div class="calendar-real">
+  <div class="header">🗓️ March 2025</div>
+  <div class="calendar-grid small-calendar">
+    <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div><div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+    
+    <div></div><div></div><div></div><div></div><div></div><div></div><div>1</div>
+    <div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div>
+    <div>9</div>
+    <div>10<div class="event">Amalaki Ekadashi</div></div>
+    <div>11</div><div>12</div><div>13</div>
+    <div>14<div class="event">Gaura Purnima</div></div>
+    <div>15</div><div>16</div>
+    <div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div>
+    <div>23</div><div>24</div><div>25</div>
+    <div>26<div class="event">Papmochani Ekadashi<br>Bhagavat Ekadashi</div></div>
+    <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+  </div>
+</div>
+
+         <div class="calendar-real">
+  <div class="header">🗓️ April 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-real small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+      
+      <div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6<div class="event">Ram Navami</div></div>
+      <div>7</div>
+      <div>8<div class="event">Kamada Ekadashi</div></div>
+      <div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+      <div>14</div><div>15</div><div>16</div><div>17</div>
+      <div>18</div><div>19</div><div>20</div>
+      <div>21</div><div>22</div><div>23</div>
+      <div>24<div class="event">Varuthini Ekadashi</div></div>
+      <div>25</div><div>26</div><div>27</div>
+      <div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+       <!-- May -->
+<div class="calendar-real">
+  <div class="header">🗓️ May 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+      
+      <div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div><div>6</div><div>7</div>
+      <div>8<div class="event">Mohini Ekadashi</div></div>
+      <div>9</div><div>10</div><div>11</div>
+      <div>12</div><div>13</div>
+      <div>14<div class="event">Nrisimha Chaturdashi</div></div>
+      <div>15</div><div>16</div><div>17</div><div>18</div>
+      <div>19</div><div>20</div><div>21</div><div>22</div>
+      <div>23<div class="event">Apara Ekadashi</div></div>
+      <div>24</div><div>25</div>
+      <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>
+  </div>
+</div>
+
+<!-- June -->
+<div class="calendar-real">
+  <div class="header">🗓️ June 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+      
+      <div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div>
+      <div>6<div class="event">Nirjala Ekadashi</div></div>
+      <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+      <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+      <div>19</div><div>20</div>
+      <div>21<div class="event">Yogini Ekadashi</div></div>
+      <div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+      <div>27</div><div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+<!-- July -->
+<div class="calendar-real">
+  <div class="header">🗓️ July 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+      
+      <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+      <div>6<div class="event">Devshayani Ekadashi</div></div>
+      <div>7</div><div>8</div><div>9</div>
+      <div>10<div class="event">Guru Purnima<br>Vyasa Puja</div></div>
+      <div>11</div>
+      <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21<div class="event">Kamika Ekadashi</div></div>
+      <div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+      <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>
+  </div>
+</div>
+
+<!-- August -->
+<div class="calendar-real">
+  <div class="header">🗓️ August 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+      
+      <div></div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div>
+      <div>4</div>
+      <div>5<div class="event">Pavitropana Ekadashi<br>Jhulan Yatra Begins</div></div>
+      <div>6</div><div>7</div><div>8</div>
+      <div>9<div class="event">Balaram Jayanti</div></div>
+      <div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+      <div>15</div>
+      <div>16<div class="event">Krishna Janmashtami</div></div>
+      <div>17<div class="event">Srila Prabhupada Appearance Day</div></div>
+      <div>18</div>
+      <div>19<div class="event">Annada Ekadashi</div></div>
+      <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+      <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+      <div>31<div class="event">Radhastami</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- September -->
+<div class="calendar-real">
+  <div class="header">🗓️ September 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+
+      <div>1</div><div>2</div>
+      <div>3<div class="event">Parivartini Ekadashi</div></div>
+      <div>4</div><div>5</div><div>6</div><div>7</div>
+      <div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17<div class="event">Indira Ekadashi</div></div>
+      <div>18</div><div>19</div><div>20</div><div>21</div>
+      <div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+      <div>27</div><div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+<!-- October -->
+<div class="calendar-real">
+  <div class="header">🗓️ October 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+
+      <div></div><div></div><div>1</div><div>2</div>
+      <div>3<div class="event">Papankusha Ekadashi</div></div>
+      <div>4</div><div>5</div>
+      <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+      <div>13</div><div>14</div><div>15</div><div>16</div>
+      <div>17<div class="event">Rama Ekadashi</div></div>
+      <div>18</div><div>19</div><div>20</div><div>21</div>
+      <div>22<div class="event">Govardhan Parikrama Begins</div></div>
+      <div>23</div><div>24</div><div>25</div><div>26</div><div>27</div>
+      <div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>
+  </div>
+</div>
+
+<!-- November -->
+<div class="calendar-real">
+  <div class="header">🗓️ November 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+
+      <div></div><div></div><div></div><div></div><div></div><div></div>
+      <div>1</div>
+      <div>2<div class="event">Devutthana Ekadashi<br>Tulsi Vivah</div></div>
+      <div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div>
+      <div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+      <div>15<div class="event">Utpanna Ekadashi</div></div>
+      <div>16</div><div>17</div><div>18</div><div>19</div><div>20</div>
+      <div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
+      <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+<!-- December -->
+<div class="calendar-real">
+  <div class="header">🗓️ December 2025</div>
+  <div class="calendar-wrapper">
+    <div class="calendar-grid small-calendar">
+      <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+      <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>  
+      
+      <div>1<div class="event">Mokshada Ekadashi<br>Gita Jayanti</div></div>
+      <div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+      <div>8</div><div>9</div><div>10</div><div>11</div>
+      <div>12</div><div>13</div><div>14</div><div>15</div>
+      <div>16<div class="event">Saphala Ekadashi</div></div>
+      <div>17</div><div>18</div><div>19</div><div>20</div>
+      <div>21</div><div>22</div><div>23</div><div>24</div>
+      <div>25</div><div>26</div><div>27</div><div>28</div>
+      <div>29</div><div>30</div>
+      <div>31<div class="event">Year-End Harinam<br>Fire Ceremony</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="calendarModalLabel">Calendar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="calendarContent" class="p-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GEV Festival Highlights 2025 -->
+<section style="background: linear-gradient(135deg, #f1f8e9, #a5d6a7); padding: 50px 20px;">
+  <h2 class="text-center mb-4" style="font-family: 'Cinzel', serif; font-size: 1.7rem; color: #2e7d32;">
+     GEV Festival Highlights – 2025
+  </h2>
+
+  <div class="container" style="max-width: 900px; margin: auto;">
+    <ul style="list-style: none; padding: 0; font-family: 'Segoe UI', sans-serif;">
+      <li style="margin-bottom: 15px;">
+        <strong> Jan 10 – Putrada Ekadashi</strong>: Seek blessings for progeny.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Jan 25 – Shattila Ekadashi</strong>: Charity and offerings of sesame.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Feb 2 – Vasant Panchami</strong>: Saraswati Puja & spring welcome.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Mar 14 – Gaura Purnima</strong>: Appearance of Sri Chaitanya Mahaprabhu.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Apr 6 – Ram Navami</strong>: Appearance of Lord Ramachandra.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> May 12 – Nrisimha Chaturdashi</strong>: Appearance of Lord Nrisimhadeva.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Jun 9 – Nirjala Ekadashi</strong>: The most austere and purifying Ekadashi.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Jul 10 – Guru Purnima / Vyasa Puja</strong>: Honoring spiritual masters.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Aug 16 – Krishna Janmashtami</strong>: Birth of Lord Sri Krishna.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Aug 31 – Radhastami</strong>: Appearance of Srimati Radharani.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Oct 21 – Govardhan Parikrama Begins</strong>: Sacred walk around Govardhan Hill.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Oct 22 – Govardhan Puja & Annakut</strong>: Mountain worship and grand prasadam offering.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Dec 1 – Mokshada Ekadashi & Gita Jayanti</strong>: Liberation-giving fast and the day Bhagavad Gita was spoken.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Dec 26 – Saphala Ekadashi</strong>: The Ekadashi of success and prosperity.
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong> Dec 31 – Year-End Harinam & Fire Ceremony</strong>: Spiritual closure & purification.
+      </li>
+    </ul>
+  </div>
+</section>
+
+   <?php include ('footer.php') ?>   
+   
+  <!-- All JS scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    // Chat Logic
+    const chatBtn = document.getElementById('chatBtn');
+    const chatBox = document.getElementById('chatBox');
+    const closeChat = document.getElementById('closeChat');
+    const sendBtn = document.getElementById('sendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const answers = {
+      "hello": "Hare Krishna! How can I assist you about Krishna or Govardhan Eco Village?",
+      "hi": "Namaste! Feel free to ask anything about GEV or Lord Krishna.",
+      "thank you": "You're most welcome! May Krishna bless you!",
+      "thanks": "Glad I could help! Hare Krishna",
+      "who are you": "I am a humble sevak (servant) of Lord Krishna, here to help you learn about His glories and Govardhan Eco Village.",
+      "krishna": "Lord Krishna is the Supreme Personality of Godhead, known for his pastimes in Vrindavan and teachings in the Bhagavad Gita.",
+      "radha": "Srimati Radharani is the divine consort of Krishna, symbolizing the highest devotion and love.",
+      "govardhan": "Govardhan Eco Village is an award-winning sustainable community founded by Radhanath Swami Maharaj.",
+      "govardhan hill": "Govardhan Hill was lifted by Krishna to protect the villagers of Vrindavan from heavy rains sent by Indra.",
+      "temple": "The Radha Krishna Temple at GEV is a peaceful place for meditation, devotion, and spiritual upliftment.",
+      "location": "Govardhan Eco Village is located in Wada, Palghar District, Maharashtra – about 2.5 hours from Mumbai.",
+      "address": "The full address is: Govardhan Eco Village, Galtare, Wada, Maharashtra 421303, India.",
+      "goshala": "The GEV Goshala is home to over 100 protected cows, bulls, and calves cared for with love and devotion.",
+      "cow": "Cows at GEV are treated with great respect and are an essential part of the sustainable ecosystem.",
+      "activities": "You can enjoy yoga, organic farming, cow seva, spiritual discourses, eco tours, and meditation at GEV.",
+      "retreat": "GEV offers spiritual retreats, yoga teacher training, and residential volunteer programs.",
+      "rooms": "Yes, GEV has eco-friendly accommodation for guests, from basic rooms to luxury cottages.",
+      "food": "GEV serves delicious, sattvic, vegetarian meals prepared with organic produce from their own farms.",
+      "donate": "To support GEV, visit the donation page. Your help nurtures cows, organic farming, and rural education.",
+      "timing": "The temple is open every day. Darshan timings are usually 7 AM to 12 PM and 4 PM to 8 PM.",
+      "website": "You can visit the official website at: https://www.ecovillage.org.in",
+      "volunteer": "GEV welcomes volunteers to help in cow care, gardening, education, and more. Check the website for details.",
+      "contact": "You can contact GEV at +91 9167203301 or email info@ecovillage.org.in",
+      "bhagavad gita": "GEV offers Gita study sessions and spiritual classes to understand the teachings of Bhagavad Gita deeply.",
+      "ashram": "GEV also serves as a spiritual ashram, offering an ideal place to reflect, serve, and grow."
+    };
+    chatBtn.onclick = () => { chatBox.style.display = 'block'; };
+    closeChat.onclick = () => { chatBox.style.display = 'none'; };
+    sendBtn.onclick = () => {
+      const userMessage = chatInput.value.trim();
+      if (userMessage === '') return;
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #A8D5BA;"><strong>You:</strong> ${userMessage}</div>`;
+      chatInput.value = '';
+      let reply = "Sorry, I don't have information about that. Try asking about Krishna, Govardhan, temple, or cows.";
+      for (const keyword in answers) {
+        if (userMessage.toLowerCase().includes(keyword)) {
+          reply = answers[keyword];
+          break;
+        }
+      }
+      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #FFD700;"><strong>AI:</strong> ${reply}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.querySelectorAll('.card, .gallery-section img').forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.1}s`;
+  });
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function showCalendarContent(title, content) {
+    document.getElementById('calendarModalLabel').innerText = title;
+    document.getElementById('calendarContent').innerHTML = content;
+  }
+</script>
+
+<script>
+  const janHTML = `
+    <div class='calendar-grid' style='font-size: 1.2rem;'>
+      <div class='day-name'>Sun</div><div class='day-name'>Mon</div><div class='day-name'>Tue</div>
+      <div class='day-name'>Wed</div><div class='day-name'>Thu</div><div class='day-name'>Fri</div><div class='day-name'>Sat</div>
+      <div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+      <div>12</div><div>13<div class='event'>Putrada Ekadashi</div></div>
+      <div>14<div class='event'>Makar Sankranti<br>Ganga Puja</div></div>
+      <div>15</div><div>16</div><div>17</div><div>18</div>
+      <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+      <div>25<div class='event'>Sat-tila Ekadashi</div></div>
+      <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>`;
+
+  function showCalendar(title, html) {
+    document.getElementById('calendarModalLabel').innerText = title;
+    document.getElementById('calendarContent').innerHTML = html;
+  }
+</script>
+</body>
+</html>
