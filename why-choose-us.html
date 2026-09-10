@@ -2,891 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Govardhan Eco Village - Shri Shri Radha Vrindavan Bihari Temple Donation</title>
+  <title>Why Choose Us | Govardhan Eco Village</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
-
-  <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Bootstrap & Google Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Mobile First Responsive Styles */
+    /* ============================================================
+       HEADER STYLES (duplicated so styling renders instantly while fetch loads header.html)
+    ============================================================ */
+    .gev-navbar { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important; min-height: 75px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); padding: 0.6rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .gev-brand { display: flex; align-items: center; gap: 14px; padding: 0; text-decoration: none; transition: all 0.3s ease; }
+    .gev-brand:hover { transform: translateY(-1px); }
+    .gev-logo-wrapper { background: rgba(255, 255, 255, 0.08); padding: 8px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+    .gev-logo { width: 42px; height: 42px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); }
+    .gev-brand-text { font-size: 1.35rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; white-space: nowrap; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+    .gev-nav-menu { gap: 0.3rem; }
+    .gev-nav-link { color: #cbd5e1 !important; font-size: 0.95rem; font-weight: 500; padding: 0.6rem 1rem !important; transition: all 0.3s ease; border-radius: 8px; display: flex; align-items: center; gap: 7px; }
+    .gev-nav-icon { font-size: 0.85rem; opacity: 0.85; }
+    .gev-nav-link:hover, .gev-nav-link:focus { color: #ffffff !important; background: rgba(99, 102, 241, 0.15); box-shadow: 0 2px 6px rgba(99, 102, 241, 0.2); }
+    .gev-dropdown { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); border-radius: 12px; padding: 0.6rem 0; min-width: 220px; margin-top: 0.5rem; }
+    .gev-dropdown-item { color: #cbd5e1; padding: 0.7rem 1.3rem; font-size: 0.9rem; transition: all 0.25s ease; display: flex; align-items: center; gap: 12px; border-radius: 8px; margin: 0.2rem 0.5rem; }
+    .gev-dropdown-item i { font-size: 0.95rem; width: 20px; text-align: center; opacity: 0.8; }
+    .gev-dropdown-item:hover, .gev-dropdown-item:focus { background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)); color: #ffffff; transform: translateX(4px); }
+    .gev-btn-donate { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; font-weight: 600; font-size: 0.9rem; padding: 0.55rem 1.1rem; border: none; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+    .gev-btn-donate:hover { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); color: #ffffff; }
+    .gev-btn-login { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: #ffffff; font-weight: 600; font-size: 0.9rem; padding: 0.55rem 1.3rem; border: none; border-radius: 8px; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3); }
+    .gev-btn-login:hover { background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4); color: #ffffff; }
+    .gev-toggler { border: 2px solid rgba(255, 255, 255, 0.2); padding: 0.5rem 0.7rem; border-radius: 10px; background: rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+    .gev-toggler:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); }
+    .gev-nav-link.active { background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)); color: #ffffff !important; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3); }
+    @media (max-width: 991.98px) {
+      .navbar-collapse { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 1.5rem; border-radius: 0 0 16px 16px; margin-top: 1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-top: none; }
+      .gev-nav-link { text-align: center; padding: 0.8rem 1rem !important; justify-content: center; }
+      .gev-btn-login { width: 100%; padding: 0.8rem 1.5rem; justify-content: center; }
+    }
+    @media (max-width: 575.98px) {
+      .gev-brand-text { display: none; }
+      .gev-logo { width: 36px; height: 36px; }
+      .gev-nav-icon { display: none; }
+    }
+
+    /* ============================================================
+       FOOTER STYLES (duplicated so styling renders instantly while fetch loads footer.html)
+    ============================================================ */
+    .gev-footer { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3); }
+    .gev-footer h4 { margin-bottom: 10px; font-size: 1rem; color: #fff; }
+    .gev-footer a { color: #93c5fd; text-decoration: none; }
+    .gev-footer a:hover { color: #FFD700; }
+    .gev-footer ul { list-style: none; padding: 0; margin: 0; line-height: 1.8; }
+    .gev-footer hr { margin: 30px 0; border-color: rgba(255,255,255,0.1); }
+
+    /* ============================================================
+       PAGE STYLES
+    ============================================================ */
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display&display=swap');
+    body { font-family: 'Poppins', sans-serif; color: #222; background-color: #fff8e1; margin: 0; padding: 0; }
+    .divine-heading { font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: bold; background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700); background-size: 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s infinite linear; letter-spacing: 2px; margin-bottom: 0.5em; }
+    @keyframes shimmer { 0% { background-position: -100%; } 100% { background-position: 200%; } }
+
+    section { position: relative; }
+    .btn-gold { background: linear-gradient(90deg, #FFD700, #A8D5BA); color: #005f56; font-weight: bold; border: none; border-radius: 30px; transition: background 0.3s, color 0.3s; }
+    .btn-gold:hover { background: #005f56; color: #FFD700; }
+
+    /* Why Choose Us */
+    #why-choose-us h2 { font-family: 'Cinzel', serif; color: #2b593c; }
+    #why-choose-us h5 { font-family: 'Poppins', sans-serif; }
+
+    /* Explore GEV */
+    #explore-gev h2 { font-family: 'Cinzel', serif; }
+    .slider-slides-content-looking-for { transition: transform 0.3s, box-shadow 0.3s; }
+    .slider-slides-content-looking-for:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.15) !important; }
+
+    /* Tour Guidelines */
+    #tour-guidelines h2 { font-family: 'Cinzel', serif; }
+
+    /* WhatsApp Cards */
+    .whatsapp-card { transition: transform 0.3s, box-shadow 0.3s; }
+    .whatsapp-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .divine-heading {
-        font-size: 1.4rem;
-        letter-spacing: 1px;
-      }
-      
-      .carousel-caption h2 {
-        font-size: 1.2rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.9rem;
-      }
-      
-      .bg-overlay {
-        padding: 8px 16px;
-      }
-      
-      .info-section {
-        padding: 2rem 1rem;
-        min-height: auto;
-      }
-      
-      .content-box {
-        padding: 20px 15px;
-        margin: 0 10px;
-      }
-      
-      .scroll-inner {
-        padding-bottom: 15px;
-        gap: 15px;
-      }
-      
-      .slider-slides-content-looking-for {
-        width: 280px !important;
-      }
-      
-      .whatsapp-card {
-        margin-bottom: 20px;
-        max-width: 100% !important;
-      }
-      
-      #why-choose-us .col-md-3 {
-        margin-bottom: 30px;
-      }
-      
-      .calendar-real {
-        width: 100%;
-        max-width: 350px;
-      }
-      
-      .small-calendar {
-        font-size: 8px;
-      }
-      
-      .small-calendar div {
-        min-height: 18px;
-        padding: 1px;
-      }
+      .divine-heading { font-size: 1.4rem; letter-spacing: 1px; }
+      .bg-overlay { padding: 8px 16px; }
+      .slider-slides-content-looking-for { width: 280px !important; }
+      .whatsapp-card { margin-bottom: 20px; max-width: 100% !important; }
+      #why-choose-us .col-md-3 { margin-bottom: 30px; }
     }
-
     @media (max-width: 576px) {
-      .navbar-brand {
-        font-size: 1.3rem;
-      }
-      
-      .divine-heading {
-        font-size: 1.2rem;
-      }
-      
-      .carousel-caption h2 {
-        font-size: 1rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.8rem;
-      }
-      
-      .info-section p {
-        font-size: 1rem;
-      }
-      
-      .content-box {
-        padding: 15px 10px;
-      }
-      
-      #tour-guidelines ul {
-        padding-left: 20px;
-      }
-      
-      #tour-guidelines li {
-        margin-bottom: 15px;
-        font-size: 0.9rem;
-      }
+      .divine-heading { font-size: 1.2rem; }
+      #tour-guidelines ul { padding-left: 20px; }
+      #tour-guidelines li { margin-bottom: 15px; font-size: 0.9rem; }
     }
-
-    /* Base Styles (unchanged) */
-    .divine-heading {
-      font-family: 'Cinzel', serif;
-      font-size: 1.7rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmer 3s infinite linear;
-      text-shadow: 2px 2px 8px #fff176;
-      letter-spacing: 2px;
-      margin-bottom: 0.5em;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: -100%; }
-      100% { background-position: 200%; }
-    }
-
-    .divine-subtitle {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.5rem;
-      color: #ff9933;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.2s 0.5s forwards;
-      text-shadow: 1px 1px 4px #ffd700;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #222;
-      background-color: #fff8e1;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background: linear-gradient(90deg, #005f56, #A8D5BA);
-    }
-    .navbar-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: #FFD700 !important;
-      letter-spacing: 2px;
-    }
-    .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: #FFD700 !important;
-      text-shadow: 1px 1px 2px #222;
-    }
-    .btn-gold {
-      background: linear-gradient(90deg, #FFD700, #A8D5BA);
-      color: #005f56;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      transition: background 0.3s, color 0.3s;
-    }
-    .btn-gold:hover {
-      background: #005f56;
-      color: #FFD700;
-    }
-    .btn-success, .btn-primary {
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    /* Section Styles */
-    section {
-      position: relative;
-    }
-    .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us {
-      background: linear-gradient(135deg, #FFF8E1, #A8D5BA);
-      color: #222;
-      border-radius: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-    .about-section h2,
-    .places-section h2,
-    .gallery-section h2,
-    .donation-section h2,
-    #information h2,
-    #why-choose-us h2,
-    #contact h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
-      font-weight: bold;
-      background-image: linear-gradient(90deg, #FFD700, #A8D5BA, #FFD700);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: text-shine 3s infinite linear;
-      margin-bottom: 24px;
-    }
-    @keyframes text-shine {
-      0% { background-position: -100%; }
-      100% { background-position: 200%; }
-    }
-    .about-section p,
-    .places-section .card-body p,
-    .gallery-section p,
-    .donation-section p,
-    #information p,
-    #why-choose-us p,
-    #contact p {
-      font-size: 1.1rem;
-      color: #005f56;
-      line-height: 1.7;
-    }
-    /* Cards */
-    .card {
-      background: #FAFAFA;
-      border: 1px solid #FFD700;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
-    }
-    .card-title {
-      color: #FFD700;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-    .card-img-top {
-      border-radius: 12px 12px 0 0;
-      border-bottom: 2px solid #FFD700;
-    }
-    /* Gallery Images */
-    .gallery-section img {
-      border: 3px solid #FFD700;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .gallery-section img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
-    }
-    /* Footer */
-    footer {
-      background-color: #005f56;
-      color: #FFD700;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-    }
-    /* Modal */
-    .modal-header, .modal-footer {
-      background: linear-gradient(90deg, #A8D5BA, #FFD700);
-      color: #005f56;
-    }
-    .modal-content {
-      border-radius: 16px;
-      border: 2px solid #FFD700;
-    }
-    /* Chat Button */
-    #chatBtn {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      z-index: 9999;
-      background-color: #FFD700;
-      color: #005f56;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: background 0.2s;
-    }
-    #chatBtn:hover {
-      background: #005f56;
-      color: #FFD700;
-    }
-
-    /* Google Fonts (optional) */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display&display=swap');
-
-/* Caption Text Animation */
-.carousel-caption h2,
-.carousel-caption p {
-  animation: fadeInUp 1.5s ease-out both;
-}
-
-/* Heading Style (with gradient) */
-.carousel-caption h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.7rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 0.3s;
-}
-
-/* Paragraph Style */
-.carousel-caption p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #ffffff;
-  animation-delay: 0.6s;
-}
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Optional: Semi-transparent overlay background */
-.bg-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 12px 24px;
-  border-radius: 12px;
-  display: inline-block;
-}
-
-    /* Animate shimmer + fade-up */
-.carousel-caption h2,
-.carousel-caption p {
-  animation: fadeInUp 1.5s ease-out both, shimmer 3s infinite linear;
-}
-
-/* Gradient + shimmer heading */
-.carousel-caption h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.7rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 0.3s;
-}
-
-/* Paragraph style with glow */
-.carousel-caption p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  animation-delay: 0.6s;
-}
-
-/* Fade in + slide up */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Shimmer effect */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-/* Optional: Background overlay for readability */
-.bg-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 12px 24px;
-  border-radius: 12px;
-  display: inline-block;
-}
-
-.info-section {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 60px; /* Adds space between sections */
-}
-
-.info-section .overlay {
-  width: 100%;
-  padding: 5rem 1rem;
-  background: none; /* Removes black overlay box */
-}
-
-#goshala {
-  background-image: url('https://crowdera-platform.s3.ap-south-1.amazonaws.com/CDRA/campaign-assets/73f20090-c418-4ff1-84c5-68661a0d188d_original_about-goshala-2.jpg');
-}
-
-#wellness {
-  background-image: url('https://www.radhanathswami.com/wp-content/uploads/2023/03/gev-rns-yoga-govardhan.jpg');
-}
-
-/* Gradient + Animation Heading */
-h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.7rem;
-  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite linear;
-}
-
-/* Shimmer Effect */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.info-section p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  width: 100%;         /* full width of parent container */
-  max-width: 1000px;   /* increase as needed */
-  margin: auto;        /* center it */
-}
-
-
-/* Button Styling */
-.btn-warning {
-  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.5);
-  transition: transform 0.2s ease;
-}
-.btn-warning:hover {
-  transform: scale(1.05);
-}
-
-.content-box {
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
-  max-width: 1200px; /* increased from 900px */
-  width: 200%;       /* ensures it stretches up to max-width */
-  color: white;
-  text-align: left;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  margin: auto;      /* centers the box if not already centered */
-  padding: 20px;     /* optional: adds inner spacing */
-}
-
-
-.content-box {
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-  max-width: 1000px;
-  width: 100%;
-  padding: 30px;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Fade-in + slide-up animation */
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-slide-up {
-  animation: fadeSlideUp 1.2s ease-out both;
-}
-
-/* Shimmer Gradient on Headings */
-.divine-heading {
-  font-family: 'Cinzel', serif;
-  font-size: 1.7rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite linear;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-#information {
-  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Purple to pink to peach */
-  background-size: 200% 200%;
-  animation: gradientShift 15s ease infinite;
-}
-
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-#information .lead {
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 1.3rem;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
-               0 0 10px rgba(255, 255, 255, 0.5),
-               0 0 20px rgba(255, 255, 255, 0.4);
-  animation: textShine 3s infinite linear;
-}
-
-
-@keyframes textShine {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
-                 0 0 10px rgba(255, 255, 255, 0.5),
-                 0 0 20px rgba(255, 255, 255, 0.4);
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
-                 0 0 10px rgba(255, 255, 255, 0.5),
-                 0 0 20px rgba(255, 255, 255, 0.4);
-  }
-}
-
-/* Background with Om watermark */
-#information {
-  position: relative;
-  background: linear-gradient(135deg, #FFF8E1, #A8D5BA); /* Dark spiritual gradient */
-  z-index: 1;
-  overflow: hidden;
-}
-
-#information::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1000px;
-  height: 1000px;
-  transform: translate(-50%, -50%);
-  background-image: url('https://i.ytimg.com/vi/ppiYNDZFtrs/maxresdefault.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 1.50; /* Watermark visibility */
-  z-index: 0;
-}
-
-/* Keep text above the background */
-#information .overlay {
-  position: relative;
-  z-index: 1;
-}
-
-/* Glowing white paragraph */
-#information .lead {
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
-               0 0 12px rgba(255, 255, 255, 0.4),
-               0 0 20px rgba(255, 255, 255, 0.3);
-  animation: textShine 3s infinite ease-in-out;
-}
-
-/* Shimmering glow effect */
-@keyframes textShine {
-  0%, 100% {
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
-                 0 0 12px rgba(255, 255, 255, 0.4),
-                 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                 0 0 20px rgba(255, 255, 255, 0.8),
-                 0 0 30px rgba(255, 255, 255, 0.7);
-  }
-}
-
-/* Animation for all main sections */
-section, .about-section, .places-section, .gallery-section, .donation-section, #contact, #why-choose-us,
-.info-section, #goshala, #wellness, #information {
-  animation: fadeSlideUp 1.2s ease-out both;
-}
-.info-section .overlay, .content-box {
-  animation: fadeSlideUp 1.2s ease-out both;
-}
-
-/* Animation for all images and cards */
-img, .card, .card-img-top, .gallery-section img, .info-section img {
-  animation: fadeSlideUp 1.2s ease-out both;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for images and cards */
-img:hover, .card:hover, .card-img-top:hover, .gallery-section img:hover, .info-section img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.18);
-}
-
-/* Animation for buttons */
-.btn, .btn-gold, .btn-success, .btn-primary, .btn-warning, .btn-outline-light {
-  animation: fadeSlideUp 1.2s ease-out both;
-  transition: transform 0.2s ease, background 0.3s, color 0.3s;
-}
-.btn:hover, .btn-gold:hover, .btn-success:hover, .btn-primary:hover, .btn-warning:hover, .btn-outline-light:hover {
-  transform: scale(1.05);
-}
-
- .calendar-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-.calendar-real {
-  width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.calendar-real .header {
-  background-color: #2b593c;
-  color: white;
-  text-align: center;
-  padding: 6px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.small-calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  font-size: 10px;
-}
-
-.small-calendar div {
-  border: 1px solid #e0e0e0;
-  min-height: 20px;
-  padding: 1px 2px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.small-calendar .day-name {
-  background-color: #c3e6cb;
-  font-weight: bold;
-  font-size: 9px;
-  text-align: center;
-  padding: 2px 0;
-}
-
-.small-calendar .event {
-  font-size: 8px;
-  color: #00695c;
-  line-height: 1.1;
-  margin-top: 2px;
-  text-align: left;
-}
-
-.text-gold { color: #FFD700; }
-  .btn-gold { background-color: #FFD700; color: #005f56; border: none; }
-  .btn-outline-gold { border-color: #FFD700; color: #FFD700; }
-  .bg-gold { background-color: #FFD700; }
-  .footer-long { background-color: #005f56; }
-  .social-icons a { text-decoration: none; }
-
-  .divine-heading {
-  font-family: 'Cinzel', serif;
-  font-size: 1.7rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #FFD700, #FF9933, #FFD700);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite linear;
-}
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-.whatsapp-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
+    html, body { overflow-x: hidden; max-width: 100%; }
   </style>
 </head>
 <body>
-  
-<!-- Header included (static placeholder since PHP include is removed) -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Govardhan Eco Village</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#why-choose-us">Why Choose Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
+
+<!-- ============================================================
+     HEADER — loaded from header.html via fetch
+============================================================ -->
+<div id="header-placeholder"></div>
+
+<!-- Spacer to push content below the fixed navbar -->
+<div style="height: 90px;"></div>
+
+<!-- ============================================================
+     PAGE CONTENT
+============================================================ -->
+
+<!-- Why Choose Us -->
+<section id="why-choose-us" class="pt-5 pb-5">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Why Choose Us</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="50">
+        <img src="https://miitulkumbhar.com/wp-content/uploads/2023/11/20-1024x1024.png" alt="Spiritual Foundation" width="120" class="mb-3">
+        <h5 class="fw-semibold" style="color:#FFD700;">Spiritual Foundation</h5>
+        <p>Inspired by timeless Vedic wisdom, we promote conscious, compassionate living.</p>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://static.vecteezy.com/system/resources/previews/028/653/755/original/green-eco-building-house-leaves-tree-environmentally-ecology-friendly-icon-png.png" alt="Eco-Friendly Living" width="100" class="mb-3">
+        <h5 class="fw-semibold" style="color:#FFD700;">Eco-Friendly Living</h5>
+        <p>A model village promoting sustainable practices in farming, water, and energy use.</p>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://toppng.com/uploads/thumbnail/community-transparent-icon-icon-community-11553449138kyrdna8s5t.png" alt="Empowerment" width="120" class="mb-3">
+        <h5 class="fw-semibold" style="color:#FFD700;">Community Empowerment</h5>
+        <p>Uplifting local villagers through education, healthcare, and vocational training.</p>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://png.pngtree.com/png-vector/20230223/ourmid/pngtree-trust-line-icon-png-image_6615381.png" alt="Transparency" width="120" class="mb-3">
+        <h5 class="fw-semibold" style="color:#FFD700;">Transparency & Trust</h5>
+        <p>Your support goes directly into projects you can see, visit, and feel proud of.</p>
       </div>
     </div>
-  </nav>
-</header>
+  </div>
+</section>
 
-
-  <!-- Why Choose Us -->
- <section id="why-choose-us" class="pt-5 mt-5 pb-5"> <!-- 👈 Bootstrap spacing -->
-
-    <div class="container text-center">
-      <h2 class="mb-4 fw-bold">Why Choose Us</h2>
-      <div class="row text-center">
-        <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="50">
-          <img src="https://miitulkumbhar.com/wp-content/uploads/2023/11/20-1024x1024.png" alt="Spiritual Foundation" width="120" class="mb-3">
-          <h5 class="fw-semibold" style="color:#FFD700;">Spiritual Foundation</h5>
-          <p>Inspired by timeless Vedic wisdom, we promote conscious, compassionate living.</p>
-        </div>
-        <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <img src="https://static.vecteezy.com/system/resources/previews/028/653/755/original/green-eco-building-house-leaves-tree-environmentally-ecology-friendly-icon-png.png" alt="Eco-Friendly Living" width="100" class="mb-3">
-          <h5 class="fw-semibold" style="color:#FFD700;">Eco-Friendly Living</h5>
-          <p>A model village promoting sustainable practices in farming, water, and energy use.</p>
-        </div>
-        <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <img src="https://toppng.com/uploads/thumbnail/community-transparent-icon-icon-community-11553449138kyrdna8s5t.png" alt="Empowerment" width="120" class="mb-3">
-          <h5 class="fw-semibold" style="color:#FFD700;">Community Empowerment</h5>
-          <p>Uplifting local villagers through education, healthcare, and vocational training.</p>
-        </div>
-        <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
-          <img src="https://png.pngtree.com/png-vector/20230223/ourmid/pngtree-trust-line-icon-png-image_6615381.png" alt="Transparency" width="120" class="mb-3">
-          <h5 class="fw-semibold" style="color:#FFD700;">Transparency & Trust</h5>
-          <p>Your support goes directly into projects you can see, visit, and feel proud of.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Add margin-bottom to the first section -->
+<!-- Explore GEV Offerings -->
 <section id="explore-gev" style="background:linear-gradient(135deg, #FFF8E1, #A8D5BA); padding: 70px 20px; font-family: 'Segoe UI', sans-serif; margin-bottom: 80px;">
-
   <div style="max-width: 1200px; margin: auto;">
-    <h2 style="text-align: center; font-size: 1.7rem; color: #004d40; margin-bottom: 40px;">
-       Explore Govardhan Ecovillage Offerings
-    </h2>
+    <h2 style="text-align: center; font-size: 1.7rem; color: #004d40; margin-bottom: 40px;">Explore Govardhan Ecovillage Offerings</h2>
     <div class="scroll-inner" style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px;">
 
-      <!-- Yoga -->
-      <a href="/yoga-courses" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #e8f5e9; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759324b4469d211016e86bb_Yoga_001.avif" alt="Yoga" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="yoga-courses.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #e8f5e9; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759324b4469d211016e86bb_Yoga_001.avif" alt="Yoga" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #1b5e20; font-size: 1.3rem; margin-bottom: 10px;"> Yoga</h3>
+          <h3 style="color: #1b5e20; font-size: 1.3rem; margin-bottom: 10px;">Yoga</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Deepen your practice with workshops, refine your technique, and explore yoga philosophy for all levels.</p>
         </div>
       </a>
 
-      <!-- Ayurveda -->
-      <a href="/ayurveda-wellness-center" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #fff3e0; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/675932b17ed5fb68f43c7260_Ayurveda_002.avif" alt="Ayurveda" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="ayurveda.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #fff3e0; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/675932b17ed5fb68f43c7260_Ayurveda_002.avif" alt="Ayurveda" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #ef6c00; font-size: 1.3rem; margin-bottom: 10px;"> Ayurveda</h3>
+          <h3 style="color: #ef6c00; font-size: 1.3rem; margin-bottom: 10px;">Ayurveda</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Explore doshas, herbal remedies, and create your wellness plan with ancient Ayurvedic wisdom.</p>
         </div>
       </a>
 
-      <!-- Sound Healing -->
-      <a href="/sound-healing" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #ede7f6; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759422162470d794f5bb5e1_SoundHealing_003.avif" alt="Sound Healing" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="sound-healing.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #ede7f6; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759422162470d794f5bb5e1_SoundHealing_003.avif" alt="Sound Healing" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #6a1b9a; font-size: 1.3rem; margin-bottom: 10px;"> Sound Healing</h3>
+          <h3 style="color: #6a1b9a; font-size: 1.3rem; margin-bottom: 10px;">Sound Healing</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Relax in the healing vibrations of singing bowls, gongs, and ancient sound therapy instruments.</p>
         </div>
       </a>
 
-      <!-- Spirituality -->
-      <a href="/spirituality" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #fce4ec; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759e9b5fc6d9dcdba853fee_Spirituality_007.avif" alt="Spirituality" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="spirituality.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #fce4ec; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759e9b5fc6d9dcdba853fee_Spirituality_007.avif" alt="Spirituality" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #ad1457; font-size: 1.3rem; margin-bottom: 10px;"> Spirituality</h3>
+          <h3 style="color: #ad1457; font-size: 1.3rem; margin-bottom: 10px;">Spirituality</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Chant, meditate, and dive into Bhakti yoga with immersive spiritual experiences.</p>
         </div>
       </a>
 
-      <!-- Sustainability -->
-      <a href="/sustainability" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #f1f8e9; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6773cf1c084bb8b479be4988_Sustainability_005.avif" alt="Sustainability" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="sustainability.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #f1f8e9; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6773cf1c084bb8b479be4988_Sustainability_005.avif" alt="Sustainability" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #33691e; font-size: 1.3rem; margin-bottom: 10px;"> Sustainability</h3>
+          <h3 style="color: #33691e; font-size: 1.3rem; margin-bottom: 10px;">Sustainability</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Organic farming, green buildings, and harmony with nature – discover our eco-solutions.</p>
         </div>
       </a>
 
-      <!-- Social Impact -->
-      <a href="/social-initiatives" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #e1f5fe; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
-        <div class="looking-for-img-wrapper">
-          <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759430cc8dbf13f80031fd1_Social_Impact_006%20(1).avif" alt="Social Impact" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        </div>
+      <a href="social-initiatives.html" class="slider-slides-content-looking-for" style="flex: 0 0 auto; width: 300px; text-decoration: none; background: #e1f5fe; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6759430cc8dbf13f80031fd1_Social_Impact_006%20(1).avif" alt="Social Impact" style="width: 100%; border-top-left-radius: 12px; border-top-right-radius: 12px;">
         <div style="padding: 15px;">
-          <h3 style="color: #0277bd; font-size: 1.3rem; margin-bottom: 10px;"> Social Impact</h3>
+          <h3 style="color: #0277bd; font-size: 1.3rem; margin-bottom: 10px;">Social Impact</h3>
           <p style="color: #4e342e; font-size: 0.95rem;">Empowering farmers, uplifting women, and transforming villages with impactful seva projects.</p>
         </div>
       </a>
@@ -895,221 +202,119 @@ img:hover, .card:hover, .card-img-top:hover, .gallery-section img:hover, .info-s
   </div>
 </section>
 
-
-<!-- ✨ Important Tour Guidelines Section -->
+<!-- Tour Guidelines -->
 <section id="tour-guidelines" style="background:linear-gradient(135deg, #FFF8E1, #A8D5BA); padding: 70px 20px; font-family: 'Segoe UI', sans-serif; margin-bottom: 80px;">
-
   <div style="max-width: 1200px; margin: auto; position: relative;">
-    
-    <!-- Decorative Lotus Images -->
     <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/66dfe619cc203cac0c5dd933_lotus-element-reverse.svg" alt="Lotus" style="position: absolute; top: -20px; left: -20px; width: 80px; opacity: 0.2;">
     <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/66dfe619c5f549ec1f187eb7_lotus-element.svg" alt="Lotus" style="position: absolute; top: -20px; right: -20px; width: 80px; opacity: 0.2;">
-    
-    <h2 style="text-align: center; color: #4a148c; font-size: 1.7rem; font-weight: bold; margin-bottom: 50px;">
-       Important Tour Guidelines
-    </h2>
+
+    <h2 style="text-align: center; color: #4a148c; font-size: 1.7rem; font-weight: bold; margin-bottom: 50px;">Important Tour Guidelines</h2>
 
     <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-
-      <!-- List Column 1 -->
       <ul style="flex: 1 1 400px; list-style: none; padding: 0; color: #37474f; font-size: 1rem;">
-        <li style="margin-bottom: 20px;">
-           <strong>Camera & Photography:</strong> Mobile photography is allowed, but Deity photos are strictly prohibited. DSLR requires prior permission. Email: 
-          <a href="mailto:dayvisits@iskcongev.com" style="color: #00695c;">dayvisits@iskcongev.com</a>
-        </li>
-        <li style="margin-bottom: 20px;">
-           <strong>Bookings:</strong> Only email communication is accepted for day visit bookings. WhatsApp/calls are not valid.
-        </li>
-        <li style="margin-bottom: 20px;">
-           <strong>Spiritual Focus:</strong> GEV is a sacred ashram. Kindly engage in discussions about Lord Krishna.
-        </li>
-        <li style="margin-bottom: 20px;">
-          Do not pluck flowers, fruits, or leaves.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Do not feed outside food to cows.
-        </li>
+        <li style="margin-bottom: 20px;"><strong>Camera & Photography:</strong> Mobile photography is allowed, but Deity photos are strictly prohibited. DSLR requires prior permission. Email: <a href="mailto:dayvisits@iskcongev.com" style="color: #00695c;">dayvisits@iskcongev.com</a></li>
+        <li style="margin-bottom: 20px;"><strong>Bookings:</strong> Only email communication is accepted for day visit bookings. WhatsApp/calls are not valid.</li>
+        <li style="margin-bottom: 20px;"><strong>Spiritual Focus:</strong> GEV is a sacred ashram. Kindly engage in discussions about Lord Krishna.</li>
+        <li style="margin-bottom: 20px;">Do not pluck flowers, fruits, or leaves.</li>
+        <li style="margin-bottom: 20px;">Do not feed outside food to cows.</li>
       </ul>
 
-      <!-- List Column 2 -->
       <ul style="flex: 1 1 400px; list-style: none; padding: 0; color: #37474f; font-size: 1rem;">
-        <li style="margin-bottom: 20px;">
-           Keep the campus clean. Use dustbins. Spitting is not allowed.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Supervise children at all times.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Smoking, tobacco, alcohol, and gutka are strictly prohibited.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Outside food and drinks are not permitted.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Refrain from loud calls or playing film songs.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Do not feed the fish in water bodies.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Bathing in the Yamuna is not allowed.
-        </li>
-        <li style="margin-bottom: 20px;">
-           Keep your belongings safe. The management is not responsible for losses.
-        </li>
+        <li style="margin-bottom: 20px;">Keep the campus clean. Use dustbins. Spitting is not allowed.</li>
+        <li style="margin-bottom: 20px;">Supervise children at all times.</li>
+        <li style="margin-bottom: 20px;">Smoking, tobacco, alcohol, and gutka are strictly prohibited.</li>
+        <li style="margin-bottom: 20px;">Outside food and drinks are not permitted.</li>
+        <li style="margin-bottom: 20px;">Refrain from loud calls or playing film songs.</li>
+        <li style="margin-bottom: 20px;">Do not feed the fish in water bodies.</li>
+        <li style="margin-bottom: 20px;">Bathing in the Yamuna is not allowed.</li>
+        <li style="margin-bottom: 20px;">Keep your belongings safe. The management is not responsible for losses.</li>
       </ul>
-
     </div>
   </div>
 </section>
 
-
-
-<!-- 🌟 WhatsApp Channels Section -->
-<!-- Add margin-bottom to the first section -->
-<section id="explore-gev" style="background:linear-gradient(135deg, #FFF8E1, #A8D5BA); padding: 70px 20px; font-family: 'Segoe UI', sans-serif; margin-bottom: 80px;">
-
+<!-- WhatsApp Channels -->
+<section id="whatsapp-channels" style="background:linear-gradient(135deg, #FFF8E1, #A8D5BA); padding: 70px 20px; font-family: 'Segoe UI', sans-serif; margin-bottom: 80px;">
   <div style="max-width: 1200px; margin: auto;">
-    <h2 style="text-align: center; font-size: 1.7rem; color: #3e2723; font-family: 'Segoe UI', sans-serif; font-weight: bold; margin-bottom: 50px;">
-       More Ways to Be Together
-    </h2>
+    <h2 style="text-align: center; font-size: 1.7rem; color: #3e2723; font-family: 'Segoe UI', sans-serif; font-weight: bold; margin-bottom: 50px;">More Ways to Be Together</h2>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
 
-      <!-- Card Template -->
-      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #e0f7fa; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #e0f7fa; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
         <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6749bd5e712d606cbf102a45_MP1_Yoga.svg" alt="Yoga" style="width: 80px; margin-bottom: 20px;">
         <h3 style="color: #00796b; font-size: 1.25rem; margin-bottom: 15px;">Wellness WhatsApp Channel</h3>
-        <a href="https://whatsapp.com/channel/0029Vaj6FgG7j6gEeIajq83Q" target="_blank"
-           style="display: inline-block; color: #00796b; border: 2px solid #00796b; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">
-          Join Now
-        </a>
+        <a href="https://whatsapp.com/channel/0029Vaj6FgG7j6gEeIajq83Q" target="_blank" style="display: inline-block; color: #00796b; border: 2px solid #00796b; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">Join Now</a>
       </div>
 
-      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #f1f8e9; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #f1f8e9; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
         <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6749bd5b86021ea2397dca59_MP4_Sustainability.svg" alt="Sustainability" style="width: 80px; margin-bottom: 20px;">
         <h3 style="color: #558b2f; font-size: 1.25rem; margin-bottom: 15px;">Sustainability WhatsApp Channel</h3>
-        <a href="https://whatsapp.com/channel/0029VaoiPCfISTkCP0BI1f0z" target="_blank"
-           style="display: inline-block; color: #558b2f; border: 2px solid #558b2f; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">
-          Join Now
-        </a>
+        <a href="https://whatsapp.com/channel/0029VaoiPCfISTkCP0BI1f0z" target="_blank" style="display: inline-block; color: #558b2f; border: 2px solid #558b2f; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">Join Now</a>
       </div>
 
-      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #ede7f6; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #ede7f6; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
         <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/6749bd5bd5ed9cb780123cb1_MP3_Spirituality.svg" alt="Spirituality" style="width: 80px; margin-bottom: 20px;">
         <h3 style="color: #6a1b9a; font-size: 1.25rem; margin-bottom: 15px;">Spirituality WhatsApp Channel</h3>
-        <a href="https://whatsapp.com/channel/0029VaoPM3PDjiOkpQfPdp18" target="_blank"
-           style="display: inline-block; color: #6a1b9a; border: 2px solid #6a1b9a; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">
-          Join Now
-        </a>
+        <a href="https://whatsapp.com/channel/0029VaoPM3PDjiOkpQfPdp18" target="_blank" style="display: inline-block; color: #6a1b9a; border: 2px solid #6a1b9a; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">Join Now</a>
       </div>
 
-      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #fff3e0; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <div class="whatsapp-card" style="flex: 1 1 260px; max-width: 280px; background: #fff3e0; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
         <img src="https://cdn.prod.website-files.com/66cdb8294c3f76f1ec3fae9f/675831ef6c69f201e11799dd_MP5_Social_Impact.svg" alt="Kids" style="width: 80px; margin-bottom: 20px;">
         <h3 style="color: #ef6c00; font-size: 1.25rem; margin-bottom: 15px;">Kids & Teens WhatsApp Channel</h3>
-       <a href="https://wa.me/your-group-link" target="_blank" 
-           style="display: inline-block; color: #ef6c00; border: 2px solid #ef6c00; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">
-          Join Now
-        </a>
+        <a href="https://wa.me/your-group-link" target="_blank" style="display: inline-block; color: #ef6c00; border: 2px solid #ef6c00; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">Join Now</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Footer included (static placeholder since PHP include is removed) -->
-<footer class="footer-long" style="background-color: #005f56; color: #FFD700; text-align: center; padding: 20px 0; font-size: 1.1rem; letter-spacing: 1px;">
-  <div class="container text-center">
-    <p class="mb-1">© 2025 Govardhan Eco Village. All rights reserved.</p>
-  </div>
-</footer>
+<!-- ============================================================
+     FOOTER — loaded from footer.html via fetch
+============================================================ -->
+<div id="footer-placeholder"></div>
 
-
-  
-  <!-- All JS scripts from original -->
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-    // Chat Logic
-    const chatBtn = document.getElementById('chatBtn');
-    const chatBox = document.getElementById('chatBox');
-    const closeChat = document.getElementById('closeChat');
-    const sendBtn = document.getElementById('sendBtn');
-    const chatMessages = document.getElementById('chatMessages');
-    const chatInput = document.getElementById('chatInput');
-    const answers = {
-      "hello": "Hare Krishna! How can I assist you about Krishna or Govardhan Eco Village?",
-      "hi": "Namaste! Feel free to ask anything about GEV or Lord Krishna.",
-      "thank you": "You're most welcome! May Krishna bless you!",
-      "thanks": "Glad I could help! Hare Krishna 🙏",
-      "who are you": "🙏 I am a humble sevak (servant) of Lord Krishna, here to help you learn about His glories and Govardhan Eco Village.",
-      "krishna": "Lord Krishna is the Supreme Personality of Godhead, known for his pastimes in Vrindavan and teachings in the Bhagavad Gita.",
-      "radha": "Srimati Radharani is the divine consort of Krishna, symbolizing the highest devotion and love.",
-      "govardhan": "Govardhan Eco Village is an award-winning sustainable community founded by Radhanath Swami Maharaj.",
-      "govardhan hill": "Govardhan Hill was lifted by Krishna to protect the villagers of Vrindavan from heavy rains sent by Indra.",
-      "temple": "The Radha Krishna Temple at GEV is a peaceful place for meditation, devotion, and spiritual upliftment.",
-      "location": "Govardhan Eco Village is located in Wada, Palghar District, Maharashtra – about 2.5 hours from Mumbai.",
-      "address": "The full address is: Govardhan Eco Village, Galtare, Wada, Maharashtra 421303, India.",
-      "goshala": "The GEV Goshala is home to over 100 protected cows, bulls, and calves cared for with love and devotion.",
-      "cow": "Cows at GEV are treated with great respect and are an essential part of the sustainable ecosystem.",
-      "activities": "You can enjoy yoga, organic farming, cow seva, spiritual discourses, eco tours, and meditation at GEV.",
-      "retreat": "GEV offers spiritual retreats, yoga teacher training, and residential volunteer programs.",
-      "rooms": "Yes, GEV has eco-friendly accommodation for guests, from basic rooms to luxury cottages.",
-      "food": "GEV serves delicious, sattvic, vegetarian meals prepared with organic produce from their own farms.",
-      "donate": "To support GEV, visit the donation page. Your help nurtures cows, organic farming, and rural education.",
-      "timing": "The temple is open every day. Darshan timings are usually 7 AM to 12 PM and 4 PM to 8 PM.",
-      "website": "You can visit the official website at: https://www.ecovillage.org.in",
-      "volunteer": "GEV welcomes volunteers to help in cow care, gardening, education, and more. Check the website for details.",
-      "contact": "You can contact GEV at +91 9167203301 or email info@ecovillage.org.in",
-      "bhagavad gita": "GEV offers Gita study sessions and spiritual classes to understand the teachings of Bhagavad Gita deeply.",
-      "ashram": "GEV also serves as a spiritual ashram, offering an ideal place to reflect, serve, and grow."
-    };
-    chatBtn.onclick = () => { chatBox.style.display = 'block'; };
-    closeChat.onclick = () => { chatBox.style.display = 'none'; };
-    sendBtn.onclick = () => {
-      const userMessage = chatInput.value.trim();
-      if (userMessage === '') return;
-      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #A8D5BA;"><strong>You:</strong> ${userMessage}</div>`;
-      chatInput.value = '';
-      let reply = "🙏 Sorry, I don't have information about that. Try asking about Krishna, Govardhan, temple, or cows.";
-      for (const keyword in answers) {
-        if (userMessage.toLowerCase().includes(keyword)) {
-          reply = answers[keyword];
-          break;
-        }
-      }
-      chatMessages.innerHTML += `<div style="margin-bottom: 10px; color: #FFD700;"><strong>AI:</strong> ${reply}</div>`;
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<!-- ============================================================
+     SCRIPTS
+============================================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 <script>
+  AOS.init({ duration: 1000, once: true });
+
   document.querySelectorAll('.card, .gallery-section img').forEach((el, i) => {
     el.style.animationDelay = `${i * 0.1}s`;
   });
-</script>
 
-<!-- Chat Button & Chat Box -->
-<button id="chatBtn">💬</button>
-<div id="chatBox" style="display: none; position: fixed; bottom: 160px; right: 20px; width: 300px; max-height: 400px; background: #fff8e1; border: 2px solid #FFD700; border-radius: 10px; overflow: hidden; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); font-family: sans-serif; color: #005f56;">
-  <div style="background: #FFD700; color: #005f56; padding: 10px; text-align: center;">
-    Ask About Krishna or GEV
-    <button id="closeChat" style="float: right; background: transparent; border: none; color: #005f56; font-size: 16px; cursor: pointer;">×</button>
-  </div>
-  <div id="chatMessages" style="padding: 10px; height: 250px; overflow-y: auto;"></div>
-  <div style="padding: 10px; border-top: 1px solid #FFD700;">
-    <input type="text" id="chatInput" placeholder="Type a question..." style="width: 80%; padding: 5px;">
-    <button id="sendBtn" style="width: 18%; background: #FFD700; color: #005f56; border: none; padding: 5px;">Send</button>
-  </div>
-</div>
+  // ---------- Load header.html ----------
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      document.querySelectorAll('#header-placeholder script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+    })
+    .catch(err => console.error('Header load error:', err));
+
+  // ---------- Load footer.html ----------
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+      document.querySelectorAll('#footer-placeholder script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+    })
+    .catch(err => console.error('Footer load error:', err));
+</script>
 
 </body>
 </html>
