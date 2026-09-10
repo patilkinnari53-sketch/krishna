@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -955,7 +953,25 @@ html, body {
 <img src="https://img1.picmix.com/output/stamp/normal/8/8/4/6/1636488_6de2b.png" id="flying-feather" alt="Peacock Feather">
 
 
-<?php include ('header.php') ?>
+<!-- Header included (static placeholder since PHP include is removed) -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Govardhan Eco Village</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-gev">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#daily-activities">Timings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
   
   <!-- Home Section (Carousel) -->
   <section id="home" style="background-color: #005f56; padding-bottom: 0px;">
@@ -1419,6 +1435,16 @@ document.addEventListener('mousemove', function(e) {
   });
 </script>
 
-<?php include ('footer.php') ?>
+<!-- Footer included (static placeholder since PHP include is removed) -->
+<footer class="footer-long">
+  <div class="container text-center">
+    <p class="mb-1">© 2025 Govardhan Eco Village. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="text-gold mx-2">Facebook</a>
+      <a href="#" class="text-gold mx-2">Instagram</a>
+      <a href="#" class="text-gold mx-2">YouTube</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
