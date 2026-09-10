@@ -1,24 +1,3 @@
-<?php
-session_start();
-
-// Redirect to login if user not logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit;
-}
-
-// Set default profile info if not set
-if (!isset($_SESSION['profile_image'])) {
-    $_SESSION['profile_image'] = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
-}
-if (!isset($_SESSION['credits'])) {
-    $_SESSION['credits'] = 100;
-}
-if (!isset($_SESSION['storage_used'])) {
-    $_SESSION['storage_used'] = "5 MB";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,24 +185,24 @@ if (!isset($_SESSION['storage_used'])) {
 </header>
 
 <div class="container">
-  <img src="<?= $_SESSION['profile_image'] ?>" class="profile-img" alt="User Avatar">
-  <h2><?= htmlspecialchars($_SESSION['username']) ?></h2>
+  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="profile-img" alt="User Avatar">
+  <h2>User</h2>
   <p>Welcome to your personal dashboard.</p>
 
   <table>
     <tr>
       <th>Email:</th>
-      <td><?= htmlspecialchars($_SESSION['email']) ?></td>
+      <td>user@example.com</td>
     </tr>
-      <tr>
     <tr>
-  <th>Donation Amount:</th>
-  <td><?= isset($_SESSION['donation_amount']) && $_SESSION['donation_amount'] ? $_SESSION['donation_amount'] . " ₹" : "No donations yet" ?></td>
-</tr>
-    <th>ID:</th>
-    <td><?= isset($_SESSION['user_id']) ? $_SESSION['user_id'] : "" ?></td>
-  </tr>
-</table>
+      <th>Donation Amount:</th>
+      <td>No donations yet</td>
+    </tr>
+    <tr>
+      <th>ID:</th>
+      <td>1001</td>
+    </tr>
+  </table>
 
   <div class="actions">
     <a href="forgot_password.php">Forgot Password</a>
