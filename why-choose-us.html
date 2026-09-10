@@ -8,12 +8,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     /* ============================================================
-       HEADER STYLES (duplicated so styling renders instantly while fetch loads header.html)
+       HEADER STYLES
+       (duplicated so header styles apply instantly while fetch loads header.html)
     ============================================================ */
     .gev-navbar { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important; min-height: 75px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); padding: 0.6rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
     .gev-brand { display: flex; align-items: center; gap: 14px; padding: 0; text-decoration: none; transition: all 0.3s ease; }
@@ -48,7 +48,7 @@
     }
 
     /* ============================================================
-       FOOTER STYLES (duplicated so styling renders instantly while fetch loads footer.html)
+       FOOTER STYLES (duplicated)
     ============================================================ */
     .gev-footer { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3); }
     .gev-footer h4 { margin-bottom: 10px; font-size: 1rem; color: #fff; }
@@ -69,26 +69,20 @@
     .btn-gold { background: linear-gradient(90deg, #FFD700, #A8D5BA); color: #005f56; font-weight: bold; border: none; border-radius: 30px; transition: background 0.3s, color 0.3s; }
     .btn-gold:hover { background: #005f56; color: #FFD700; }
 
-    /* Why Choose Us */
     #why-choose-us h2 { font-family: 'Cinzel', serif; color: #2b593c; }
     #why-choose-us h5 { font-family: 'Poppins', sans-serif; }
 
-    /* Explore GEV */
     #explore-gev h2 { font-family: 'Cinzel', serif; }
     .slider-slides-content-looking-for { transition: transform 0.3s, box-shadow 0.3s; }
     .slider-slides-content-looking-for:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.15) !important; }
 
-    /* Tour Guidelines */
     #tour-guidelines h2 { font-family: 'Cinzel', serif; }
 
-    /* WhatsApp Cards */
     .whatsapp-card { transition: transform 0.3s, box-shadow 0.3s; }
     .whatsapp-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .divine-heading { font-size: 1.4rem; letter-spacing: 1px; }
-      .bg-overlay { padding: 8px 16px; }
       .slider-slides-content-looking-for { width: 280px !important; }
       .whatsapp-card { margin-bottom: 20px; max-width: 100% !important; }
       #why-choose-us .col-md-3 { margin-bottom: 30px; }
@@ -292,11 +286,23 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
+
+      // Re-execute scripts inside header (needed for Bootstrap dropdown toggles)
       document.querySelectorAll('#header-placeholder script').forEach(oldScript => {
         const newScript = document.createElement('script');
         Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
         newScript.textContent = oldScript.textContent;
         oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+
+      // Highlight the active menu item based on current page
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('#header-placeholder .gev-nav-link').forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href && currentPage.includes(href.replace('.html', ''))) {
+          link.classList.add('active');
+        }
       });
     })
     .catch(err => console.error('Header load error:', err));
